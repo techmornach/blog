@@ -1,0 +1,55 @@
+const projectsData = [
+  {
+    title: 'Image Optimizer',
+    description: `The Image Optimizer API allows users to upload images and optimize them using the imagemin library. It provides an endpoint for image upload and optimization, and supports both browser-based and programmatic access.`,
+    imgSrc: '',
+    href: 'https://mornach-image-optimizer.onrender.com/',
+    github: 'https://github.com/anonymousMornach/image-optimizer-api',
+    tech1: 'Node',
+    tech2: 'React',
+    tech3: 'Javascript',
+  },
+  {
+    title: 'Library Api',
+    description: `The Library API provides a set of endpoints to manage books. It allows users to perform operations such as retrieving all books, getting information about a specific book, creating new books, updating existing books, deleting books, searching for books by title or author, paginating through a list of books, and sorting books based on specific fields.`,
+    imgSrc: '',
+    href: 'https://mornach-library.onrender.com/',
+    github: 'https://github.com/anonymousMornach/Library-api',
+    tech1: 'React',
+    tech2: 'Node',
+    tech3: 'Javascript',
+  },
+  {
+    title: 'Mailto',
+    description: `This is a Node.js application that provides an API endpoint for sending emails with email validation using the ZeroBounce API. The application utilizes the Express framework for handling HTTP requests, Nodemailer for sending emails, and Axios for making HTTP requests to the ZeroBounce API.`,
+    imgSrc: '',
+    href: '',
+    github: 'https://github.com/anonymousMornach/Mailto',
+    tech1: 'Node',
+    tech2: 'Javascript',
+    tech3: 'ZeroBounce API',
+  },
+  {
+    title: 'Minecraft Temple',
+    description: `A Simple model of a Mine Craft Temple Made using Blender, and rendered for the web using three js`,
+    imgSrc: '',
+    href: 'https://jade-cuchufli-34ef78.netlify.app/',
+    github: 'https://github.com/anonymousMornach/Minecraft-temple',
+    tech1: 'Three.js',
+    tech2: 'Blender',
+    tech3: 'Javascript',
+  },
+  {
+    title: 'Sentiment Analysis',
+    description:
+      'The Sentiment Analysis is an AI-powered API that analyzes the sentiment of text input and provides a sentiment score indicating whether the text is positive, negative, or neutral.',
+    imgSrc: '',
+    href: 'https://sentiment-x0w0.onrender.com/',
+    github: 'https://github.com/anonymousMornach/Sentiment_Api',
+    tech1: 'Node',
+    tech2: 'React',
+    tech3: 'Javascript',
+  },
+]
+
+export default projectsData
