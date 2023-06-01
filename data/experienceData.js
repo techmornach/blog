@@ -1,10 +1,10 @@
 const experienceData = [
   {
     title: 'Full-Stack Developer',
-    company: 'BFTTT Resources Inc',
-    location: 'Canada',
+    company: 'Luvable Babycare Stores',
+    location: 'Lagos, Nigeria',
     range: '2021 - Present',
-    url: 'https://suite.endole.co.uk/insight/company/FC032967-bftt-resources-inc',
+    url: 'https://luvable-landing.onrender.com',
     text1:
       'Developed and implemented responsive front-end interfaces using HTML, CSS, and JavaScript, ensuring optimal user experience across different devices.',
     text2:
@@ -13,17 +13,17 @@ const experienceData = [
       'Collaborated with cross-functional teams to gather user requirements, analyze project scope, and deliver high-quality applications.',
   },
   {
-    title: 'Full Stack Developer',
-    company: 'Ubora',
-    location: 'Canada',
-    range: '2019 - 2021',
-    url: 'https://www.uboraconsulting.com/',
+    title: 'Software Engineer (Freelancer)',
+    company: 'Upwork',
+    location: 'Remote',
+    range: '2022 - present',
+    url: 'https://upwork.com/freelancers/~0151e50359e7ead8cb',
     text1:
-      'Developed and maintained web applications using Python frameworks such as Django and Flask, ensuring scalability and performance.',
+      'Developed customized websites and web applications for diverse clients, meeting their specific requirements and delivering high-quality solutions.',
     text2:
-      'Integrated third-party APIs, including payment processors and social media logins, to enhance application functionality.',
+      'Collaborated closely with clients to understand their needs and provide technical guidance throughout the development process.',
     text3:
-      'Optimized application performance by implementing caching mechanisms and optimizing database queries, resulting in improved user experience.',
+      'Implemented responsive designs and optimized user interfaces for mobile devices, enhancing the overall user experience.',
   },
 ]
 

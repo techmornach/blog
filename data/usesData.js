@@ -1,7 +1,8 @@
 const usesData = [
   {
-    title: 'Macbook Pro 13"',
-    description: `M1 - 8 core CPU, 8 core GPU, 16 GB RAM`,
+    title: '2015 Macbook Pro 15 inch"',
+    description: `2.5 GHz Quad-Core Intel Core i7 CPU, AMD Radeon R9 M370X 2 GB
+ GPU, 16 GB 1600 MHz DDR3 RAM`,
     href: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
   },
   {
@@ -40,13 +41,8 @@ const usesData = [
     href: 'https://www.microsoft.com/en-us/edge?r=1',
   },
   {
-    title: 'Level Up',
+    title: 'Monokai',
     description: `I regularly change themes in VS Code for fun, this is my current theme`,
-    href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
-  },
-  {
-    title: 'Material Theme Icons',
-    description: `I just select the most popular icon theme at some point`,
     href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
   },
   {

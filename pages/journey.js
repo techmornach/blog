@@ -13,7 +13,8 @@ export default function Journey() {
             Journey
           </h1>
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
-            Trying not to compare myself to others. Taking baby steps everyday.
+            The Journey to mornachy is definitely a slow and difficult one, but i'll definitely get
+            there one step at a time
           </p>
         </div>
         <motion.div

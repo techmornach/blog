@@ -77,7 +77,7 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
+  var ParthBirthDate = '2004-08-16'
   var birthDate = new Date(ParthBirthDate)
 
   var ParthAge = year - birthDate.getFullYear()
@@ -141,7 +141,7 @@ export default function Now(currentlyReading) {
         <div>
           <div className="flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad, India</span>
+              <span className="ml-2 font-semibold">Location:</span> <span>Lagos, Nigeria</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
@@ -213,39 +213,38 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Data Engineer at{' '}
+            I work as a Software Engineer at{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://landing-page.onrender.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture
+              Luvable Babycare
             </Link>
             .
           </p>
           <br />
+          <p>I work on building Scalable and Reliable Web Applications.</p>
+          <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
+            I have been trying to shift my field from Software Engineering to Data Science. I have
+            been constantly applying for the same as well.
           </p>
           <br />
           <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
-            constantly applying for the same as well.
-          </p>
-          <br />
-          <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
+            My location preference is Lagos but I am open to shift to another place for a better
             opportunity.
           </p>
           <br />
           <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
+            I'm always trying to learn more, and at the moment I'm trying to read this{' '}
             <Link
               href={
                 'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
               }
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Machine Learning tutorial
+              "Data Science for Business What you need to know about data mining and data-analytic
+              thinking"
             </Link>
             .
           </p>
@@ -269,14 +268,14 @@ export default function Now(currentlyReading) {
           </p>
           <br />
           <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
+            I am also going to start applying for Bachelors in Medcine in January 2024 for intake of
+            Summer 2025. I hope to get a good university at Lagos. I'll update this page after I get
+            my admits.
           </p>
           <br />
           <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
-            one!
+            I recently started to draft a post about Building Data Intensive Applications, it will
+            be a good one!
           </p>
         </div>
         <div className="mt-3 text-sm">

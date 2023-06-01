@@ -47,8 +47,8 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="flex flex-col pt-3">
               <a
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth"
-                data-screen-name="@_ParthDesai_"
+                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Ifedayo"
+                data-screen-name="@taiwoifedayo4"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -67,12 +67,13 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building data pipelines and automating them at{' '}
+                {text1} Currently, I am focused on building Scalable and Reliable Web Applications
+                at{' '}
                 <Link
-                  href={'https://www.accenture.com/in-en'}
+                  href={'https://www.luvable-landing.onrender.com/'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Accenture
+                  Luvable Babycare
                 </Link>
               </RoughNotation>
             </p>
@@ -90,10 +91,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <p className="sm:block md:hidden lg:hidden">
               I am always looking to learn new things. I am currently working on a few projects
               related to
-              <span className="font-semibold">
-                {' '}
-                Natural Language Processing and Machine Learning.{' '}
-              </span>
+              <span className="font-semibold">Scalable Data Systems </span>
               At the same time I am{' '}
               <RoughNotation
                 type="underline"
@@ -103,8 +101,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science.
+                actively on the lookout for remote internships which I can pursue in field of Web
+                Development
               </RoughNotation>
             </p>
             <p className="hidden md:block">
@@ -118,9 +116,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 strokeWidth="3"
                 show={true}
               >
-                <span className="text-black dark:text-white">
-                  Natural Language Processing and Machine Learning.{' '}
-                </span>
+                <span className="text-black dark:text-white">Scalable Data Systems </span>
               </RoughNotation>
               At the same time I am{' '}
               <RoughNotation
@@ -131,8 +127,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science
+                actively on the lookout for remote internships which I can pursue in field of
+                Software Engineering
               </RoughNotation>
             </p>
             <br />
@@ -141,7 +137,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               projects with new people. Feel free to reach out if you have anything to talk about,
               you can reach me through{' '}
               <Link
-                href={'mailto:desaiparth2000@gmail.com'}
+                href={'mailto:techmornach@gmail.com'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
               >
                 Mail
@@ -161,7 +157,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               </Link>{' '}
               or{' '}
               <Link
-                href={'https://api.whatsapp.com/send?phone=916358190818&text=hi'}
+                href={'https://api.whatsapp.com/send?phone=+2349124120757&text=hi'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
               >
                 Whatsapp

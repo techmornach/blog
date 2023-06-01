@@ -1,0 +1,113 @@
+---
+title: The need for Reliable Scalable and Maintainable Applications.
+date: '2023-06-01'
+tags: [Data, Web, Applications, Databases, Tech]
+draft: false
+summary: Many applications today are data intensive rather than compute-intensive. Raw CPU power is rarely a limiting factor for these applications.
+---
+
+<img
+  className="inline"
+  src="/static/images/Blog/Reliable-Scalable-Maintainable-Applications.jpg"
+  alt="Reliable Scalable Maintainable Applications"
+/>
+
+> The internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+>
+> Alan Kay, Dr Dobb's Journal (2012)
+
+- Many applications today are data-intensive rather than compute-intensive.
+- **Raw CPU power** is rarely a limiting factor for these applications.
+
+- The main issues are usually:
+
+  - Data Amount
+
+  - Data Complexity
+
+  - The speed at which data changes.
+
+_Data intensive applications are typically built from standard building blocks which provide a common needed functionality_. Example, many applications needs to:
+
+- **Store data**, so it can be found when needed ([Databases](https://developer.spotify.com/dashboard/))
+- **Remember results** of expensive operation, to speed up reads ([Caches](https://developer.spotify.com/dashboard/))
+- Allow users to **search and filter** data by keyword and various ways ([Search Indexes](https://developer.spotify.com/dashboard/))
+- **Send messages** to other process for asynchronous handling (**[Stream Processing](https://developer.spotify.com/dashboard/)**)
+- **Periodically crunch** a large amount of accumulated data (**[Batch Processing](https://developer.spotify.com/dashboard/)**)
+
+These data systems are such a succesful abstraction we use them without thinking too much.
+
+When building an application, you wouldn't dream of writing a new data storage engine from scratch, because databases are a perfectly good tool for the job.
+
+In the real world, things aren't that simple. We have so many database applications with different characteristics.
+
+Different applications have different requirements
+
+- There are various approaches to caching
+- Several ways of buiding search indexes
+- And many more.
+
+So when building an application, we need to figure out the right tool and approach for the task at hand.
+
+At times it is hard to combine several tools when you need to do something a single tool can't do alone.
+
+### <u>**Thinking About Data Systems**</u>
+
+> We typically think of **[Databases](https://developer.spotify.com/dashboard/)**, **[Queues](https://developer.spotify.com/dashboard/)** and **[Caches](https://developer.spotify.com/dashboard/)** e.t.c as being different categories of tools.
+
+Databases and Message queues have certain superficial similariies;
+
+- They both store data for some time
+
+**BUT** they have different access patterns, which leads to different performance characteristics and different implementations.
+
+**SO** why are they under an umbrella term like _data systems_?
+
+In recent years many new tools for data storage have emerged.
+
+These tools are optimized for a variety of different use cases, and they no longer neatly fit into traditional categories. For Example;
+
+- There are data stores that are also used as message queues such as **[Redis](https://developer.spotify.com/dashboard/)**
+- There are message queues with database-like durability guarantees **[Kafka](https://developer.spotify.com/dashboard/)**
+
+The boundaries between these categories are getting blurred.
+
+Many applications now have such demanding or wide ranging requirements that a single tool can no longer meet all of its data processing and storage needs.
+
+The work is broken down into tasks that can be performed efficiently on a single tool, and those different tools are stiched together using application code.
+
+**FOR EXAMPLE**
+
+- If you have an **application-managed caching layer** (using **[Memcached](https://developer.spotify.com/dashboard/)** or similar), or a full-text search server separate from your main database (such as **[Elastisearch](https://developer.spotify.com/dashboard/)** or **[Solr](https://developer.spotify.com/dashboard/)**).
+- It is normally the application code's responsibilty to keep those caches and indexes in sync with the main database.
+- When you combine Several tools to provide a service, the service interface or API usually hides those implementation details from clients.
+- You've essentially created a new special-purpose data system from smaller, general-purpose components.
+- Your composite data system may provide certain guarantees, e.g that the cache will be correctly invalidated or updated on writes, so that outside clients see consistent results.
+- You are now not only an application developer, but also a data system designer.
+
+**When designing a data system or service, tricky questions that arise include**
+
+- How do you ensure that the data remains correct and complete even when things go wrong internally?
+- How do you provide consistently good perfomance to clients, even when parts of the system are degraded?
+- How do you scale to handle an increase in load?
+- What does a good API for the service look like?
+
+**There are many factors that influence data system design, which includes**
+
+- Skills and experience of the people involved.
+- Legacy system dependencies
+- Time scale for delivery
+- Organization tolerance for different kinds of risks
+- Regulatory constraints
+- E.T.C
+
+**There are three concerns that are most important in most software systems:**
+
+- Reliability
+  The system should continue to function correctly at the desired performance, even in the face for adversity, which may be hardware, software or even human error.
+- Scalability
+  As the system grows in data volume, traffic or complexity there should be reasonable ways of dealing with that growth.
+- Maintainability
+  Over time many different people will work on the system, they should be able to work on it productively.
+
+We all use these terms without a clear Understandiing of what they mean.
