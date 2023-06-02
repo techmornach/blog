@@ -239,7 +239,7 @@ export default function Now(currentlyReading) {
             I'm always trying to learn more, and at the moment I'm trying to read this{' '}
             <Link
               href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
+                'https://www.amazon.com/Data-Science-Business-Data-Analytic-Thinking/dp/1449361323'
               }
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
