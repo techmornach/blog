@@ -1,10 +1,10 @@
-/* import siteMetadata from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
 import Tweet from '@/components/Tweet'
 import { getTweets } from '@/lib/twitter'
 
 export async function getStaticProps() {
-  const tweets = await getTweets([
+  /*   const tweets = await getTweets([
     '1189444653059174401',
     '935857414435495937',
     '1334528781139259400',
@@ -31,13 +31,13 @@ export async function getStaticProps() {
     '1002104154737684480',
   ])
 
-  return { props: { tweets } }
+  return { props: { tweets } } */
 }
 
 export default function Tweets({ tweets }) {
   return (
     <>
-      <PageSEO
+      {/*       <PageSEO
         title={`Tweets - ${siteMetadata.author}`}
         description="A collection of tweets that inspire me, make me laugh, and make me think."
       />
@@ -54,8 +54,8 @@ export default function Tweets({ tweets }) {
         {tweets.map((tweet) => (
           <Tweet key={tweet.id} {...tweet} />
         ))}
-      </div>
+      </div> */}
+      <h1>Page Still beign built</h1>
     </>
   )
 }
- */
