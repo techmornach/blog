@@ -29,11 +29,11 @@ summary: Many applications today are data intensive rather than compute-intensiv
 
 _Data intensive applications are typically built from standard building blocks which provide a common needed functionality_. Example, many applications needs to:
 
-- **Store data**, so it can be found when needed ([Databases](https://developer.spotify.com/dashboard/))
-- **Remember results** of expensive operation, to speed up reads ([Caches](https://developer.spotify.com/dashboard/))
-- Allow users to **search and filter** data by keyword and various ways ([Search Indexes](https://developer.spotify.com/dashboard/))
-- **Send messages** to other process for asynchronous handling (**[Stream Processing](https://developer.spotify.com/dashboard/)**)
-- **Periodically crunch** a large amount of accumulated data (**[Batch Processing](https://developer.spotify.com/dashboard/)**)
+- **Store data**, so it can be found when needed ([Databases](<https://www.oracle.com/ng/database/what-is-database/#:~:text=A%20database%20is%20an%20organized,database%20management%20system%20(DBMS).>))
+- **Remember results** of expensive operation, to speed up reads ([Caches](https://www.techtarget.com/searchstorage/definition/cache))
+- Allow users to **search and filter** data by keyword and various ways ([Search Indexes](https://www.algolia.com/blog/product/what-is-a-search-index-and-how-does-it-work/#:~:text=So%20what%20is%20a%20search,search%20engine%20algorithm%20retrieves%20information.))
+- **Send messages** to other process for asynchronous handling (**[Stream Processing](https://www.techtarget.com/searchdatamanagement/definition/stream-processing#:~:text=Stream%20processing%20is%20a%20data,or%20another%20stream%20processing%20engine.)**)
+- **Periodically crunch** a large amount of accumulated data (**[Batch Processing](https://aws.amazon.com/what-is/batch-processing/#:~:text=Batch%20processing%20is%20the%20method,run%20on%20individual%20data%20transactions.)**)
 
 These data systems are such a succesful abstraction we use them without thinking too much.
 
@@ -53,7 +53,7 @@ At times it is hard to combine several tools when you need to do something a sin
 
 ### <u>**Thinking About Data Systems**</u>
 
-> We typically think of **[Databases](https://developer.spotify.com/dashboard/)**, **[Queues](https://developer.spotify.com/dashboard/)** and **[Caches](https://developer.spotify.com/dashboard/)** e.t.c as being different categories of tools.
+> We typically think of **[Databases](<https://www.oracle.com/ng/database/what-is-database/#:~:text=A%20database%20is%20an%20organized,database%20management%20system%20(DBMS).>)**, **[Queues](https://www.geeksforgeeks.org/queue-data-structure/)** and **[Caches](https://www.techtarget.com/searchstorage/definition/cache)** e.t.c as being different categories of tools.
 
 Databases and Message queues have certain superficial similariies;
 
@@ -67,8 +67,8 @@ In recent years many new tools for data storage have emerged.
 
 These tools are optimized for a variety of different use cases, and they no longer neatly fit into traditional categories. For Example;
 
-- There are data stores that are also used as message queues such as **[Redis](https://developer.spotify.com/dashboard/)**
-- There are message queues with database-like durability guarantees **[Kafka](https://developer.spotify.com/dashboard/)**
+- There are data stores that are also used as message queues such as **[Redis](https://redis.io/)**
+- There are message queues with database-like durability guarantees **[Kafka](https://kafka.apache.org/)**
 
 The boundaries between these categories are getting blurred.
 
@@ -78,7 +78,7 @@ The work is broken down into tasks that can be performed efficiently on a single
 
 **FOR EXAMPLE**
 
-- If you have an **application-managed caching layer** (using **[Memcached](https://developer.spotify.com/dashboard/)** or similar), or a full-text search server separate from your main database (such as **[Elastisearch](https://developer.spotify.com/dashboard/)** or **[Solr](https://developer.spotify.com/dashboard/)**).
+- If you have an **application-managed caching layer** (using **[Memcached](https://memcached.org/)** or similar), or a full-text search server separate from your main database (such as **[Elastisearch](https://www.elastic.co/)** or **[Solr](https://solr.apache.org/)**).
 - It is normally the application code's responsibilty to keep those caches and indexes in sync with the main database.
 - When you combine Several tools to provide a service, the service interface or API usually hides those implementation details from clients.
 - You've essentially created a new special-purpose data system from smaller, general-purpose components.
@@ -114,3 +114,4 @@ We all use these terms without a clear Understandiing of what they mean.
 
 **Credits**
 Image by [Freepik](https://www.freepik.com/free-vector/gradient-website-hosting-illustration_22650925.htm#query=scalable%20and%20reliable%20data%20intensive%20applications&position=45&from_view=search&track=robertav1_2_sidr)
+Reference from [Designing Data Intensive Application](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) by [Martin Kleppmann](https://martin.kleppmann.com/)
