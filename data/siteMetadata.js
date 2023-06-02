@@ -18,10 +18,10 @@ const siteMetadata = {
   website: 'https://taiwoifedayo.vercel.app',
   locale: 'en-US',
   analytics: {
-    plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
-    umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: 'G-F6V2QTJ628', // e.g. UA-000000-2 or G-XXXXXXX
+    plausibleDataDomain: 'https://techmornach.vercel.app', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    simpleAnalytics: true, // true or false
+    umamiWebsiteId: '43953bed-40dd-4022-9de8-e714d5b70587', // e.g. 123e4567-e89b-12d3-a456-426614174000
+    googleAnalyticsId: 'G-1L8Y75YERZ', // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
     provider: 'emailOctopus',
