@@ -1,4 +1,4 @@
-import siteMetadata from '@/data/siteMetadata'
+/* import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
 import Tweet from '@/components/Tweet'
 import { getTweets } from '@/lib/twitter'
@@ -58,3 +58,4 @@ export default function Tweets({ tweets }) {
     </>
   )
 }
+ */
