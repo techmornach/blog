@@ -47,7 +47,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="flex flex-col pt-3">
               <a
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Ifedayo"
+                href="https://twitter.com/messages/compose?recipient_id=1581266042785087489&text=Hey Ifedayo"
                 data-screen-name="@taiwoifedayo4"
                 target="_blank"
                 rel="noreferrer noopener"

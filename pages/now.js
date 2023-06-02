@@ -23,7 +23,7 @@ import {
 
 export const getServerSideProps = async () => {
   const response = await fetch(
-    'https://api.openweathermap.org/data/2.5/weather?lat=23.014770&lon=72.526330&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
+    'https://api.openweathermap.org/data/2.5/weather?q=Ikorodu,Lagos,NG&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
   )
   const data = await response.json()
 
@@ -146,7 +146,7 @@ export default function Now(currentlyReading) {
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
                 <a
-                  href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
+                  href="https://weather.com/en-GB/weather/today/l/1d50ec8b93e0394b20ee9bf6990fef845565ade147c5cd5ee9f7381a930b28d9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
