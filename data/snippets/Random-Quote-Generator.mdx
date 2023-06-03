@@ -1,0 +1,49 @@
+---
+title: Random Quote Generator
+date: '2023-06-03'
+tags: [Node, Javascript, Tech, node-fetch]
+draft: false
+summary: Generate random quotes using node-fetch library
+images: []
+layout: PostSimple
+---
+
+Here's a fun Node.js snippet that generates a random quote using the `fetch` module:
+
+First, make sure you have the `node-fetch` package installed by running the following command in your project directory:
+
+```
+npm install node-fetch
+```
+
+Once `node-fetch` is installed, you can use the following snippet:
+
+```js showLineNumbers
+const fetch = require('node-fetch')
+
+async function getRandomQuote() {
+  try {
+    const response = await fetch('https://api.quotable.io/random')
+    const data = await response.json()
+    if (response.ok) {
+      console.log(`"${data.content}" - ${data.author}`)
+    } else {
+      console.error(`Failed to fetch quote - ${response.status} ${response.statusText}`)
+    }
+  } catch (error) {
+    console.error(`Failed to fetch quote - ${error.message}`)
+  }
+}
+
+getRandomQuote()
+```
+
+This script fetches a random quote from the "Quotable" API (`https://api.quotable.io/random`) and logs the quote content and author to the console. If the request fails, it logs an error message.
+
+Save the script in a file (e.g., `random-quote.js`), and then run it using Node.js:
+
+```
+node random-quote.js
+```
+
+Each time you run the script, it will fetch a new random quote and display it in the console. You can integrate this snippet into your own code to add a fun and dynamic element like displaying a random quote on a webpage or including it in an application's output.

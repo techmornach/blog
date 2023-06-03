@@ -1,0 +1,50 @@
+---
+title: Page Visit Simulator
+date: '2023-06-03'
+tags: [Node, Javascript, Tech, Axios]
+draft: false
+summary: Simulate page visits a certain number of times using Node
+images: []
+layout: PostSimple
+---
+
+Using the axios library in node, you can simulate page visits
+First, make sure you have the `axios` package installed by running the following command in your project directory:
+
+```
+npm install axios
+```
+
+Once `axios` is installed, you can use the following script:
+
+```js showLineNumbers
+const axios = require('axios')
+
+async function simulateVisits(url, numVisits) {
+  for (let i = 0; i < numVisits; i++) {
+    try {
+      const response = await axios.get(url)
+      console.log(`Visit ${i + 1} successful - Status: ${response.status}`)
+    } catch (error) {
+      console.error(`Visit ${i + 1} failed - Error: ${error.message}`)
+    }
+  }
+}
+
+const targetUrl = 'https://example.com' // Replace with your desired URL
+const numberOfVisits = 5 // Replace with the desired number of visits
+
+simulateVisits(targetUrl, numberOfVisits)
+```
+
+In the script above, replace `'https://example.com'` with the URL you want to simulate visiting, and set the `numberOfVisits` variable to the desired number of visits.
+
+This script uses `axios` to send GET requests to the specified URL, and it logs the status of each visit. Successful visits will display the HTTP status code, while failed visits will display the corresponding error message.
+
+Save the script in a file (e.g., `simulate-visits.js`), and then run it using Node.js:
+
+```
+node simulate-visits.js
+```
+
+The script will simulate visiting the specified URL the specified number of times and display the results in the console.
