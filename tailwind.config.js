@@ -42,10 +42,10 @@ module.exports = {
           200: '#FBA4BC',
           300: '#F575A5',
           400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
+          500: '#1E90FF', // Dodger Blue
+          600: '#B100E8', // Updated color
+          700: '#9A00E2', // Updated color
+          800: '#8300DB', // Updated color
           900: '#6A0568',
         },
         'primary-color': {
@@ -53,10 +53,10 @@ module.exports = {
           200: '#FBA4BC',
           300: '#F575A5',
           400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
+          500: '#1E90FF', // Dodger Blue
+          600: '#B100E8', // Updated color
+          700: '#9A00E2', // Updated color
+          800: '#8300DB', // Updated color
           900: '#6A0568',
         },
         'primary-color-dark': {
@@ -64,16 +64,17 @@ module.exports = {
           200: '#FBA4BC',
           300: '#F575A5',
           400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
+          500: '#1E90FF', // Dodger Blue
+          600: '#B100E8', // Updated color
+          700: '#9A00E2', // Updated color
+          800: '#8300DB', // Updated color
           900: '#6A0568',
         },
         'background-color': '#000',
         green: colors.emerald,
         gray: colors.neutral,
       },
+
       typography: (theme) => ({
         DEFAULT: {
           css: {

@@ -3,7 +3,7 @@ const usesData = [
     title: '2015 Macbook Pro 15 inch"',
     description: `2.5 GHz Quad-Core Intel Core i7 CPU, AMD Radeon R9 M370X 2 GB
  GPU, 16 GB 1600 MHz DDR3 RAM`,
-    href: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
+    href: 'https://support.apple.com/kb/sp719?locale=en_US',
   },
   {
     title: 'Alfred',

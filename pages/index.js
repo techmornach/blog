@@ -39,7 +39,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="box"
                 show={true}
-                color="#DE1D8D"
+                color="#1E90FF"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="highlight"
                 show={true}
-                color="#DE1D8D"
+                color="#1E90FF"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
@@ -107,7 +107,7 @@ export default function Home({ posts }) {
             <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="/projects">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
@@ -136,7 +136,7 @@ export default function Home({ posts }) {
               </div>
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-purple-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="https://taiwoifedayo.vercel.app/">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
@@ -165,7 +165,7 @@ export default function Home({ posts }) {
               </div>
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
-                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-blue-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="https://taiwoifedayo.vercel.app/resume.pdf">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
