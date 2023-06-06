@@ -237,3 +237,7 @@ input:-webkit-autofill:focus {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
+/* Body */
+body {
+  cursor: none;
+}
