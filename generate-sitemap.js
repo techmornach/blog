@@ -2,7 +2,7 @@ const fs = require('fs')
 const globby = require('globby')
 const matter = require('gray-matter')
 const prettier = require('prettier')
-const siteMetadata = require('../data/siteMetadata')
+const siteMetadata = require('./data/siteMetadata')
 
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
@@ -66,5 +66,5 @@ const siteMetadata = require('../data/siteMetadata')
   })
 
   // eslint-disable-next-line no-sync
-  fs.writeFileSync('../public/sitemap.xml', formatted)
+  fs.writeFileSync('public/sitemap.xml', formatted)
 })()

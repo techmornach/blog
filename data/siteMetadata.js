@@ -6,7 +6,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Ifedayo',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://techmornach.vercel.app/',
+  siteUrl: 'https://techmornach.vercel.app',
   siteRepo: 'https://github.com/anonymousMornach/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
