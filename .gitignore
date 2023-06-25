@@ -12,7 +12,7 @@
 # next.js
 /.next/
 /out/
-public/sitemap.xml
+#public/sitemap.xml
 .vercel
 
 # production
