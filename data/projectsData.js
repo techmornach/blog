@@ -2,7 +2,7 @@ const projectsData = [
   {
     title: 'Omnimail',
     description: `OmniMail is an open-source mail client application that enables users to send and receive emails from their preferred email accounts. With a user-friendly interface, OmniMail allows seamless management of emails, including composing, replying, and organizing messages. Powered by Node.js and React.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/GF2W669/Screenshot-2023-07-08-at-11-00-26.png',
     href: '',
     github: 'https://github.com/anonymousMornach/Omnimail',
     tech1: 'Node',
@@ -12,7 +12,7 @@ const projectsData = [
   {
     title: 'Omniteleos',
     description: `This is freelancing website design to connect developers, designers and technical workers to respective clients, It aims to fix trust issues between clients and the freelancers, by preventing any interactions between both sides, with this model in mind even beginner freelancers can get gigs.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/xMb6PB5/Screenshot-2023-07-08-at-13-21-28.png',
     href: 'https://omniteleos.vercel.app/',
     github: '',
     tech1: 'Node',
@@ -22,7 +22,7 @@ const projectsData = [
   {
     title: 'Luvable Baby Care Stores',
     description: `Having an E-Commerce Store is a must have for any successful business, This is a Scalable and Reliable platform designed to serve thousands of clients. It has core Security fixes that prevents most cyber security threats, making it truly and industry standard site befitting the company reputation.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/vjK5Zwr/Screenshot-2023-06-28-at-07-09-18.png',
     href: 'https://luvablebaby.onrender.com/',
     github: '',
     tech1: 'Node',
@@ -32,7 +32,7 @@ const projectsData = [
   {
     title: 'Template Developer Portfolio',
     description: `The template is designed to showcase the portfolio of a developer.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/sJWfMm8/Screenshot-2023-06-30-at-09-39-13.png',
     href: 'https://taiwoifedayo.vercel.app/',
     github: 'https://github.com/anonymousMornach/portfolio-v1',
     tech1: 'Node',
@@ -42,7 +42,7 @@ const projectsData = [
   {
     title: 'Template Influencer Portfolio',
     description: `The template is designed to showcase the portfolio of an influencer or content creator. It includes various sections to highlight different aspects of the influencer's work, such as biography, social media presence, collaborations, and more.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/cb6B47D/Screenshot-2023-07-08-at-11-23-01.png',
     href: 'https://influencer-portfolio.vercel.app/',
     github: 'https://github.com/anonymousMornach/InfluencerPortfolio',
     tech1: 'Node',
@@ -50,9 +50,19 @@ const projectsData = [
     tech3: 'TypeScript',
   },
   {
+    title: 'Quttie Pearl Cakes',
+    description: `Indulge your senses in a delectable world of confectionary delight with Quttie Cakes! We proudly present their mouthwatering website, a virtual gateway to a paradise of sweet sensations. As you enter our digital bakery, a symphony of flavors dances before your eyes, tempting you with each delectable creation.`,
+    imgSrc: 'https://i.ibb.co/p0Xv2T6/Screenshot-2023-06-27-at-22-19-26.png',
+    href: 'https://quttiepearlcakes.vercel.app/',
+    github: '',
+    tech1: 'Node',
+    tech2: 'React',
+    tech3: 'Javascript',
+  },
+  {
     title: 'Image Optimizer',
     description: `The Image Optimizer APP allows users to upload images and optimize them using the imagemin library. It provides an endpoint for image upload and optimization, and supports both browser-based and programmatic access.`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/g9mxvT5/Screenshot-2023-07-08-at-11-49-55.png',
     href: 'https://mornach-image-optimizer.onrender.com/',
     github: 'https://github.com/anonymousMornach/ImageOptimizer',
     tech1: 'Node',
@@ -82,7 +92,7 @@ const projectsData = [
   {
     title: 'Minecraft Temple',
     description: `A Simple model of a Mine Craft Temple Made using Blender, and rendered for the web using three js`,
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/wWRQ91Y/Screenshot-2023-07-08-at-13-18-38.png',
     href: 'https://jade-cuchufli-34ef78.netlify.app/',
     github: 'https://github.com/anonymousMornach/Minecraft-temple',
     tech1: 'Three.js',
@@ -93,7 +103,7 @@ const projectsData = [
     title: 'Sentiment Bot',
     description:
       'The Sentiment Bot is an AI-powered Bot that analyzes the sentiment of text input and provides a sentiment score indicating whether the text is positive, negative, or neutral.',
-    imgSrc: '',
+    imgSrc: 'https://i.ibb.co/TH4cDYs/Screenshot-2023-07-08-at-11-53-47.png',
     href: 'https://sentiment-bot.onrender.com/',
     github: 'https://github.com/anonymousMornach/Sentiment_bot',
     tech1: 'Node',
