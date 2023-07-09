@@ -59,7 +59,7 @@ const defaultTheme = {
 export default function App({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
-      <Provider apiKey="pt_7c8b6840f5ba39cd3b2b471cd8efc2" theme={defaultTheme}>
+      <Provider apiKey="pt_187a5e4cf87c0170ed30705e60e786" theme={defaultTheme}>
         <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
           <ProgressBar bgcolor="#1E90FF" />
           <ScrollTop />
