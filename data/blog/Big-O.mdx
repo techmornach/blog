@@ -1,0 +1,70 @@
+---
+title: Big O.
+date: '2023-07-09'
+tags: [Big O, Algorithms, Efficiency, Asymptotic Runtime, Data Structures]
+draft: false
+summary: Big O time ( Also known as asymptotic runtime ) is the metric used to describe the efficiency of an algorithm.
+---
+
+<img className="inline" src="/static/images/Blog/Big-O/1.png" alt="Data Structures in Javascript" />
+
+# Big O
+
+**Big O** time ( Also known as asymptotic runtime ) is the metric used to describe the efficiency of an algorithm. The ability to understand it really helps in developing an algorithm and also helps judge whether the speed of your algorithm.
+
+#### **Check out this analogy**
+
+Imagine you have an hard drive containing a document which needs to be delivered to a person living in another country, what are you options to deliver this document?
+
+1. Use an electronic mail service, or social media chat services
+2. Send it to the person by cargo or plane
+3. Book a flight and deliver it to the person yourself
+
+By default the best option that comes to mind is the electronic service. its fast, easy and cheap so why not, but remember when using electronic service the time it takes increases as the file size increases unlike the other options whereby the delivery time remains constant regardless of the file size.
+If the size of the document is really large like around 10 terabytes, it could take days or even weeks and in the worst case, months for the file to get to the recipient. in this case the other options becomes much faster and efficient than using electronic service.
+
+#### Time Complexity
+
+This is what the concept of Big O runtime means. in the case of the file transfer analogy above, we can describe it algorithm runtime as:
+
+- Electronic Service: O( s ), where "s" is the size of the file. this shows that the time increases linearly as the file size increases.( this is simplified ).
+- Airplane Transfer: O( 1 ), with respect to the size of the file, as the size of the file increases, the time remains constant.
+
+No matter how big the constant is and how slow the linear increase is, at a point linear will surpass constant. In other words no matter how long it takes to deliver by plane, and how small the file size increases in each instance, at a point the time taken to deliver electronically will surpass that of plane.
+
+There are so many runtimes other than this, some of the common ones are O( log N ), O( N log N ), O( N ). there is no fixed list of possible runtimes.
+
+#### Best Case, Worst Case and Expected Case
+
+We can describe our algorithm runtimes in three different ways.
+Lets look at this from the perspective of quicksort
+
+```javascript
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr
+  } else {
+    const pivotIndex = Math.floor(Math.random() * arr.length)
+    const pivot = arr[pivotIndex]
+    const lesser = []
+    const greater = []
+
+    for (let i = 0; i < arr.length; i++) {
+      if (i !== pivotIndex) {
+        if (arr[i] < pivot) {
+          lesser.push(arr[i])
+        } else {
+          greater.push(arr[i])
+        }
+      }
+    }
+
+    return [...quickSort(lesser), pivot, ...quickSort(greater)]
+  }
+}
+
+// Example usage
+const array = [9, 5, 2, 7, 1, 8, 3]
+const sortedArray = quickSort(array)
+console.log(sortedArray)
+```
