@@ -1,9 +1,18 @@
 const usesData = [
   {
     title: '2015 Macbook Pro 15 inch"',
-    description: `2.5 GHz Quad-Core Intel Core i7 CPU, AMD Radeon R9 M370X 2 GB
- GPU, 16 GB 1600 MHz DDR3 RAM`,
-    href: 'https://support.apple.com/kb/sp719?locale=en_US',
+    description: `2.5 GHz Quad-Core Intel Core i7 CPU, AMD Radeon R9 M370X 2 GB GPU, 16 GB 1600 MHz DDR3 RAM`,
+    href: 'https://support.apple.com/kb/sp719',
+  },
+  {
+    title: 'Dell Vostro"',
+    description: `2.5 GHz Quad-Core Intel Core i5 12th gen CPU, 1 GB GPU, 8 GB 1600 MHz DDR4 RAM`,
+    href: 'https://dell.com/',
+  },
+  {
+    title: 'Dell Optiplex 390',
+    description: `2.5 GHz Quad-Core Intel Core i5 2nd gen CPU, AMD Radeon 12 GB GPU, 16 GB 1600 MHz DDR3 RAM`,
+    href: 'https://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/optiplex-390-spec-sheet.pdf',
   },
   {
     title: 'Alfred',
@@ -16,9 +25,39 @@ const usesData = [
     href: 'https://superhuman.com',
   },
   {
+    title: 'Photoshop',
+    description: `Perfect for editing images for web use`,
+    href: 'https://www.adobe.com/ng/products/photoshop.html',
+  },
+  {
+    title: 'After Effects',
+    description: `Perfect for editing motion graphics`,
+    href: 'https://www.adobe.com/ng/products/aftereffects.html',
+  },
+  {
     title: 'VSCode',
-    description: `Nothing shocking here. Click here to find my plugins & config`,
-    href: 'https://gist.github.com/pycoder2000/36812bb44f24e96ce09359cefd9e7198',
+    description: `My favorite light weight code editor`,
+    href: 'https://code.visualstudio.com/',
+  },
+  {
+    title: 'Postman',
+    description: `For API testing and documentation`,
+    href: 'https://www.postman.com/',
+  },
+  {
+    title: 'Webstorm',
+    description: `My favorite goto editor for javascript development`,
+    href: 'https://www.jetbrains.com/webstorm/',
+  },
+  {
+    title: 'IntelliJ IDEA',
+    description: `My favorite goto editor for dart and flutter development`,
+    href: 'https://www.jetbrains.com/idea/',
+  },
+  {
+    title: 'Pycharm',
+    description: `My favorite goto editor for python and django development`,
+    href: 'https://www.jetbrains.com/pycharm/',
   },
   {
     title: 'warp',
@@ -51,11 +90,6 @@ const usesData = [
     href: 'https://linear.app',
   },
   {
-    title: 'Hyper & Oh My Zsh',
-    description: `Click here to find my plugins & config`,
-    href: 'https://gist.github.com/DLevai94/af307fb45d525ffebf38750970f98ed2',
-  },
-  {
     title: 'Daily.dev',
     description: `Homepage to stay up to date in the dev world`,
     href: 'https://api.daily.dev/',
@@ -69,6 +103,16 @@ const usesData = [
     title: 'Canva',
     description: `Sometimes I use Canva to edit some images quickly.`,
     href: 'https://www.canva.com/',
+  },
+  {
+    title: 'Blender',
+    description: `Perfect for making 3d models`,
+    href: 'https://www.blender.org/',
+  },
+  {
+    title: 'Typora',
+    description: `I use Typora for writing markdown documents`,
+    href: 'https://typora.io/',
   },
   {
     title: 'Obsidian',

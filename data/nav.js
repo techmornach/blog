@@ -17,6 +17,7 @@ export const navigation = {
     { name: 'Quotes', href: '/quotes' },
     { name: 'Tweets', href: '/tweets' },
     { name: 'RSS', href: '/feed.xml' },
+    { name: 'Sitemap', href: '/sitemap.xml' },
     // { name: 'Guestbook', href: '/guestbook' },
     // { name: 'Bookmarks', href: '/bookmarks' },
     // { name: 'Todo', href: '/todo' },
