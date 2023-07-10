@@ -6,120 +6,80 @@ draft: false
 summary: Many applications today are data intensive rather than compute-intensive. Raw CPU power is rarely a limiting factor for these applications.
 ---
 
+{' '}
 <img
   className="inline"
   src="/static/images/Blog/Reliable-Scalable-Maintainable-Applications/Reliable-Scalable-Maintainable-Applications.jpg"
   alt="Reliable Scalable Maintainable Applications"
 />
 
-> The internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+> "The internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?" - Alan Kay, Dr Dobb's Journal (2012)
 >
-> Alan Kay, Dr Dobb's Journal (2012)
-
-- Many applications today are data-intensive rather than compute-intensive.
-- **Raw CPU power** is rarely a limiting factor for these applications.
-
-- The main issues are usually:
-
-  - Data Amount
-
-  - Data Complexity
-
-  - The speed at which data changes.
-
-_Data intensive applications are typically built from standard building blocks which provide a common needed functionality_. Example, many applications needs to:
-
-- **Store data**, so it can be found when needed ([Databases](<https://www.oracle.com/ng/database/what-is-database/#:~:text=A%20database%20is%20an%20organized,database%20management%20system%20(DBMS).>))
-- **Remember results** of expensive operation, to speed up reads ([Caches](https://www.techtarget.com/searchstorage/definition/cache))
-- Allow users to **search and filter** data by keyword and various ways ([Search Indexes](https://www.algolia.com/blog/product/what-is-a-search-index-and-how-does-it-work/#:~:text=So%20what%20is%20a%20search,search%20engine%20algorithm%20retrieves%20information.))
-- **Send messages** to other process for asynchronous handling (**[Stream Processing](https://www.techtarget.com/searchdatamanagement/definition/stream-processing#:~:text=Stream%20processing%20is%20a%20data,or%20another%20stream%20processing%20engine.)**)
-- **Periodically crunch** a large amount of accumulated data (**[Batch Processing](https://aws.amazon.com/what-is/batch-processing/#:~:text=Batch%20processing%20is%20the%20method,run%20on%20individual%20data%20transactions.)**)
-
-These data systems are such a succesful abstraction we use them without thinking too much.
-
-When building an application, you wouldn't dream of writing a new data storage engine from scratch, because databases are a perfectly good tool for the job.
-
-In the real world, things aren't that simple. We have so many database applications with different characteristics.
-
-Different applications have different requirements
-
-- There are various approaches to caching
-- Several ways of buiding search indexes
-- And many more.
-
-So when building an application, we need to figure out the right tool and approach for the task at hand.
-
-At times it is hard to combine several tools when you need to do something a single tool can't do alone.
-
-### <u>**Thinking About Data Systems**</u>
-
-> We typically think of **[Databases](<https://www.oracle.com/ng/database/what-is-database/#:~:text=A%20database%20is%20an%20organized,database%20management%20system%20(DBMS).>)**, **[Queues](https://www.geeksforgeeks.org/queue-data-structure/)** and **[Caches](https://www.techtarget.com/searchstorage/definition/cache)** e.t.c as being different categories of tools.
-
-Databases and Message queues have certain superficial similariies;
-
-- They both store data for some time
-
-**BUT** they have different access patterns, which leads to different performance characteristics and different implementations.
-
-**SO** why are they under an umbrella term like _data systems_?
-
-In recent years many new tools for data storage have emerged.
-
-These tools are optimized for a variety of different use cases, and they no longer neatly fit into traditional categories. For Example;
-
-- There are data stores that are also used as message queues such as **[Redis](https://redis.io/)**
-- There are message queues with database-like durability guarantees **[Kafka](https://kafka.apache.org/)**
-
-The boundaries between these categories are getting blurred.
-
-Many applications now have such demanding or wide ranging requirements that a single tool can no longer meet all of its data processing and storage needs.
-
-The work is broken down into tasks that can be performed efficiently on a single tool, and those different tools are stiched together using application code.
-
-**FOR EXAMPLE**
-
-- If you have an **application-managed caching layer** (using **[Memcached](https://memcached.org/)** or similar), or a full-text search server separate from your main database (such as **[Elastisearch](https://www.elastic.co/)** or **[Solr](https://solr.apache.org/)**).
-- It is normally the application code's responsibilty to keep those caches and indexes in sync with the main database.
-- When you combine Several tools to provide a service, the service interface or API usually hides those implementation details from clients.
-- You've essentially created a new special-purpose data system from smaller, general-purpose components.
-- Your composite data system may provide certain guarantees, e.g that the cache will be correctly invalidated or updated on writes, so that outside clients see consistent results.
-- You are now not only an application developer, but also a data system designer.
-
-**When designing a data system or service, tricky questions that arise include**
-
-- How do you ensure that the data remains correct and complete even when things go wrong internally?
-- How do you provide consistently good perfomance to clients, even when parts of the system are degraded?
-- How do you scale to handle an increase in load?
-- What does a good API for the service look like?
-
-<img
-  className="inline"
-  src="/static/images/Blog/Reliable-Scalable-Maintainable-Applications/DataSytem.png"
-  alt="Data Systems"
-/>
-> One possible architecture for a data system that combines several components.
-
-**There are many factors that influence data system design, which includes**
-
-- Skills and experience of the people involved.
-- Legacy system dependencies
-- Time scale for delivery
-- Organization tolerance for different kinds of risks
-- Regulatory constraints
-- E.T.C
-
-**There are three concerns that are most important in most software systems:**
-
-- Reliability
-  The system should continue to function correctly at the desired performance, even in the face for adversity, which may be hardware, software or even human error.
-- Scalability
-  As the system grows in data volume, traffic or complexity there should be reasonable ways of dealing with that growth.
-- Maintainability
-  Over time many different people will work on the system, they should be able to work on it productively.
-
-We all use these terms without a clear Understandiing of what they mean.
-
-**Credits**
-
-> Image by [Freepik](https://www.freepik.com/free-vector/gradient-website-hosting-illustration_22650925.htm#query=scalable%20and%20reliable%20data%20intensive%20applications&position=45&from_view=search&track=robertav1_2_sidr)
-> Reference from [Designing Data Intensive Application](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) by [Martin Kleppmann](https://martin.kleppmann.com/)
+> In today's technological landscape, many applications prioritize handling large amounts of data over intensive computation. As a result, raw CPU power is rarely a limiting factor for these applications.
+>
+> However, the main challenges faced by these data-intensive applications are typically related to:
+>
+> - Data Amount: Managing and processing large volumes of data efficiently.
+> - Data Complexity: Dealing with the intricacies and diverse formats of the data.
+> - Data Velocity: Handling the speed at which data changes.
+>
+> Data-intensive applications are commonly built using standard building blocks that provide essential functionality. For example, these applications often require:
+>
+> - Data storage capabilities through databases to ensure data availability when needed.
+> - Caches to store and retrieve frequently accessed data, enhancing read performance.
+> - Search indexes for enabling efficient data searching and filtering based on keywords and various criteria.
+> - Stream processing systems to handle asynchronous message handling between processes.
+> - Batch processing systems for periodically processing large volumes of accumulated data.
+>
+> These data systems have become successful abstractions that are widely used without much consideration.
+>
+> When building an application, it is not necessary to reinvent the wheel by creating a new data storage engine from scratch. Databases serve as excellent tools for data storage and retrieval.
+>
+> However, in the real world, things are not always so straightforward. There are numerous database applications with different characteristics and requirements. Various approaches to caching, search indexing, and more exist.
+>
+> When building an application, it is crucial to select the right tools and approaches that suit the specific requirements at hand. In some cases, it may be challenging to achieve the desired functionality with a single tool alone.
+>
+> ### **Thinking About Data Systems**
+>
+> We commonly categorize tools like databases, message queues, and caches as different entities. Although databases and message queues both store data, they have different access patterns, resulting in distinct performance characteristics and implementations.
+>
+> However, recent years have witnessed the emergence of new tools for data storage that blur the boundaries between traditional categories. For example:
+>
+> - There are data stores, like Redis, that are also utilized as message queues.
+> - Message queues like Kafka provide database-like durability guarantees.
+>
+> These tools are optimized for different use cases and no longer neatly fit into traditional categories. The lines between these categories are becoming increasingly blurred.
+>
+> Many modern applications have extensive and diverse requirements, making it challenging for a single tool to fulfill all data processing and storage needs. Consequently, work is broken down into tasks that can be efficiently performed by individual tools, and these different tools are stitched together using application code.
+>
+> For instance:
+>
+> - An application may incorporate an application-managed caching layer using tools like Memcached or similar systems.
+> - It may also involve a separate full-text search server, such as Elasticsearch or Solr, alongside the main database.
+> - The responsibility of keeping caches and indexes in sync with the primary database often falls on the application code.
+> - When multiple tools are combined to provide a service, the service's interface or API typically hides the implementation details from clients.
+> - This integration of various tools creates a new special-purpose data system composed of smaller, general-purpose components.
+> - The composite data system may offer certain guarantees, such as correct cache invalidation or update propagation on writes, to ensure consistent results for external clients.
+> - Building such a system requires not only application development skills but also expertise in designing data systems.
+>
+> When designing a data system or service, several challenging questions arise, including:
+>
+> - How can data remain correct and complete even when internal failures occur?
+> - How can consistent performance be provided to clients, even when certain parts of the system experience degradation?
+> - How can the system scale to handle increasing loads?
+> - What does an effective API for the service look like?
+>
+> The design of a data system is influenced by various factors, such as the skills and experience of the people involved, dependencies on legacy systems, the time scale for delivery, an organization's tolerance for different kinds of risks, regulatory constraints, and more.
+>
+> In most software systems, three primary concerns hold significant importance:
+>
+> 1. Reliability: The system should continue to function correctly, meeting desired performance levels, even in the face of adversity caused by hardware failures, software errors, or human mistakes.
+> 2. Scalability: As the system grows in terms of data volume, traffic, or complexity, there should be reasonable ways to handle that growth, ensuring the system's performance and availability are not compromised.
+> 3. Maintainability: Over time, different individuals will work on the system, and they should be able to work on it productively, understanding and enhancing its functionality without introducing unnecessary complications.
+>
+> These terms—reliability, scalability, and maintainability—are commonly used, but it is crucial to have a clear understanding of what they truly mean and how to address them in the design and implementation of data-intensive applications.
+>
+> **Credits:**
+>
+> - Image by [Freepik](https://www.freepik.com/free-vector/gradient-website-hosting-illustration_22650925.htm#query=scalable%20and%20reliable%20data%20intensive%20applications&position=45&from_view=search&track=robertav1_2_sidr)
+> - Reference from the book [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) by Martin Kleppmannhttps://martin.kleppmann.com/)

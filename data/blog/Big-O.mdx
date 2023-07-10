@@ -1,43 +1,39 @@
 ---
-title: Big O.
+title: Understanding Big O- Analyzing Algorithm Efficiency.
 date: '2023-07-09'
 tags: [Big O, Algorithms, Efficiency, Asymptotic Runtime, Data Structures]
 draft: false
 summary: Big O time ( Also known as asymptotic runtime ) is the metric used to describe the efficiency of an algorithm.
 ---
 
-<img className="inline" src="/static/images/Blog/Big-O/1.png" alt="Data Structures in Javascript" />
+<img className="inline" src="/static/images/Blog/Big-O/1.png" alt="Big O" />
 
-# Big O
+# Understanding Big O: Analyzing Algorithm Efficiency
 
-**Big O** time ( Also known as asymptotic runtime ) is the metric used to describe the efficiency of an algorithm. The ability to understand it really helps in developing an algorithm and also helps judge whether the speed of your algorithm.
+Have you ever wondered how we measure the efficiency of algorithms? Enter **Big O** time, also known as asymptotic runtime. It's a metric used to describe how fast an algorithm runs. Understanding Big O is crucial for developing efficient algorithms and evaluating their speed.
 
-#### **Check out this analogy**
+To grasp the concept of Big O, let's consider a relatable analogy. Imagine you have a document on your hard drive that needs to be delivered to someone in another country. How would you choose to send it?
 
-Imagine you have an hard drive containing a document which needs to be delivered to a person living in another country, what are you options to deliver this document?
+1. Option 1: Use an electronic mail or social media chat service.
+2. Option 2: Send it through cargo or a plane.
+3. Option 3: Book a flight and personally deliver it.
 
-1. Use an electronic mail service, or social media chat services
-2. Send it to the person by cargo or plane
-3. Book a flight and deliver it to the person yourself
+The electronic service might be your default choice—it's fast, easy, and cheap. However, when using electronic services, the delivery time increases as the file size grows. In contrast, the other options maintain a constant delivery time regardless of file size.
 
-By default the best option that comes to mind is the electronic service. its fast, easy and cheap so why not, but remember when using electronic service the time it takes increases as the file size increases unlike the other options whereby the delivery time remains constant regardless of the file size.
-If the size of the document is really large like around 10 terabytes, it could take days or even weeks and in the worst case, months for the file to get to the recipient. in this case the other options becomes much faster and efficient than using electronic service.
+But what if the document is exceptionally large, around 10 terabytes? In that case, the electronic service would take days, weeks, or even months for the file to reach the recipient. Suddenly, the other options become significantly faster and more efficient.
 
-#### Time Complexity
+This scenario illustrates the concept of time complexity in Big O. In the above analogy:
 
-This is what the concept of Big O runtime means. in the case of the file transfer analogy above, we can describe it algorithm runtime as:
+- Electronic Service: O(s), where "s" represents the size of the file. This indicates that the time taken increases linearly as the file size increases.
+- Airplane Transfer: O(1), regardless of the file size. The time remains constant.
 
-- Electronic Service: O( s ), where "s" is the size of the file. this shows that the time increases linearly as the file size increases.( this is simplified ).
-- Airplane Transfer: O( 1 ), with respect to the size of the file, as the size of the file increases, the time remains constant.
+No matter how slow the linear increase or how big the constant, there comes a point where linear time surpasses constant time. In other words, regardless of how long it takes to deliver by plane or how small each file size increase is, there will be a tipping point where electronic delivery will take longer than the airplane option.
 
-No matter how big the constant is and how slow the linear increase is, at a point linear will surpass constant. In other words no matter how long it takes to deliver by plane, and how small the file size increases in each instance, at a point the time taken to deliver electronically will surpass that of plane.
+Now, Big O encompasses various runtimes, including O(log N), O(N log N), and O(N). There's no fixed list of possible runtimes—it depends on the specific algorithm.
 
-There are so many runtimes other than this, some of the common ones are O( log N ), O( N log N ), O( N ). there is no fixed list of possible runtimes.
+#### Best Case, Worst Case, and Expected Case
 
-#### Best Case, Worst Case and Expected Case
-
-We can describe our algorithm runtimes in three different ways.
-Lets look at this from the perspective of quicksort
+When describing algorithm runtimes, we can consider three different cases. Let's examine these cases in the context of the quicksort algorithm:
 
 ```javascript
 function quickSort(arr) {
@@ -48,7 +44,6 @@ function quickSort(arr) {
     const pivot = arr[pivotIndex]
     const lesser = []
     const greater = []
-
     for (let i = 0; i < arr.length; i++) {
       if (i !== pivotIndex) {
         if (arr[i] < pivot) {
@@ -68,3 +63,147 @@ const array = [9, 5, 2, 7, 1, 8, 3]
 const sortedArray = quickSort(array)
 console.log(sortedArray)
 ```
+
+In quicksort:
+
+1. A random element from the array is chosen as the pivot.
+2. The array is divided into two separate arrays: one with elements less than the pivot and another with elements greater than the pivot.
+3. The arrays are arranged as lesser, pivot, greater, assuming an ascending order sort.
+4. The function is recursively called on the new arrays.
+5. Finally, a sorted array is returned.
+
+Let's explore the possible runtimes involved:
+
+**Best Case:** What if all elements in the array are equal? In this scenario, the quicksort algorithm will traverse the array only once, resulting in a runtime of O(N). However, the best-case scenario depends on the specific implementation of quicksort, as some implementations perform well on sorted arrays.
+
+```javascript
+const array = [1, 1, 1, 1, 1]
+const sortedArray = quickSort(array)
+console.log(sortedArray)
+```
+
+**Worst Case:** What if the pivot always ends up being the largest element in the array? This easily occurs if the pivot is chosen as the first element, and the array is sorted in reverse order. In such a scenario, the algorithm won't divide the array in half as intended but instead reduce it by one element at a time. This results in a worst-case runtime of O(N^2).
+
+**Expected Case:** The best and worst cases are often outliers, not the norm. While occasionally the pivot may be very low or high, it won't consistently happen. Hence, we can expect the runtime to be O(log N).
+
+It's worth noting that the best-case time complexity is seldom discussed because it isn't a practical concept. After all, any algorithm can be given a special input to yield an O(1) best-case scenario.
+
+For most problems, the worst case and expected case are typically the same, although there are exceptions.
+
+Understanding Big O helps you evaluate the efficiency of algorithms and make informed decisions when developing software. By considering different runtime scenarios, you can identify optimal approaches to solving problems.
+
+#### Space Complexity: Optimizing Memory Usage
+
+When analyzing algorithms, it's not just time that matters; the amount of memory an algorithm uses is also a critical factor. This is known as **space complexity**.
+
+Space complexity is closely related to time complexity. For example, if you need to create an array of size `n`, it will require O(n) space. If you require a two-dimensional array of size `n x n`, it will require O(n^2) space.
+
+Space complexity also includes stack space in recursive algorithms. Let's consider the following code, which calculates the factorial of a number:
+
+```javascript
+function factorial(n) {
+  if (n <= 0) {
+    return 1
+  }
+  return n * factorial(n - 1)
+}
+```
+
+In this recursive algorithm, each function call adds a level to the stack:
+
+```
+factorial(4)
+  -> factorial(3)
+    -> factorial(2)
+      -> factorial(1)
+        -> factorial(0)
+```
+
+Here, `n` refers to both the number of times the algorithm is called and the input of the function, which in this case is 5. However, having `n` calls doesn't necessarily mean it takes O(n) space. For example, consider the function below, which adds adjacent elements between 0 and `n`:
+
+```javascript
+function pairSumSequence(n) {
+  let sum = 0
+  for (let i = 0; i < n; i++) {
+    sum += pairSum(i, i + 1)
+  }
+  return sum
+}
+
+function pairSum(a, b) {
+  return a + b
+}
+```
+
+Although there are roughly O(n) calls to `pairSum`, these calls don't exist simultaneously on the call stack. Therefore, this function only uses O(1) space since it is not called recursively.
+
+#### Dropping the Constants: Focusing on Growth Rate
+
+It's possible for O(n) code to run faster than O(1) code for specific inputs. Big O notation describes the rate of increase of an algorithm's runtime. As a result, we often drop the constants in runtime analysis. For example, an algorithm that may have been described as O(2n) is actually O(n).
+
+Some people might resist dropping the constants. They may encounter code with two non-nested `for` loops and argue that it is O(2n). However, they are not being more precise; they are missing the point.
+
+Consider the following code:
+
+```javascript
+function findMinMax(array) {
+  let min = 2
+  let max = 2
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i]
+    }
+    if (array[i] > max) {
+      max = array[i]
+    }
+  }
+}
+```
+
+```javascript
+function findMinMax(array) {
+  let min = 2
+  let max = 2
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i]
+    }
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i]
+    }
+  }
+}
+```
+
+Which one is faster? The first implementation uses a single `for` loop, while the second implementation uses two `for` loops. However, the first solution has two lines of code instead of one.
+
+If we were to count the number of instructions for each solution, we would have to go down to the assembly level and consider factors such as the number of instructions required for multiplication versus addition and how the compiler optimizes code. It becomes overly complicated, and it's not a practical approach.
+
+Instead, Big O notation allows us to express how the runtime scales. We accept that it doesn't mean O(n) is always better than O(n^2). It simply describes the growth rate of the algorithm. So, focus on understanding the overall trend and scalability when comparing different algorithms.
+
+#### Drop the Non-Dominant Terms: Simplifying Expressions
+
+Sometimes, you may come across expressions like O(N^2 + N). What should you do with the second term, N? It's not a constant, but it's not particularly significant either.
+
+Remember that we drop the constants. Therefore, O(N^2 + N^2) simplifies to O(N^2). If we don't care about the second N^2 term, why should we care about N? We don't.
+
+In Big O notation, we drop the non-dominant terms.
+
+- O(N^2 + N) becomes O(N^2).
+- O(N + Log(N)) becomes O(N).
+- O(5 _ 2^N + 1000 _ N^100) becomes O(2^N).
+
+There may still be a sum in the runtime expression. For example, the expression O(B^2 + A) cannot be further reduced without specific knowledge of A and B.
+
+To better visualize the rate of increase, consider the following graph depicting the growth rate of common Big O times:
+
+![Graph depicting the rate of increase for different Big O times](https://your-website.com/static/images/Blog/Big-O/2.png)
+
+As shown, O(x^2) is worse than O(x), but it is still much better than O(2^x) or O(x!). Moreover, there are even worse runtimes than O(x!), such as O(x^x) or O(2^x \* x!).
+
+By simplifying expressions and dropping non-dominant terms, we can better understand the scalability and efficiency of different algorithms. This allows us to make informed decisions when designing and optimizing software solutions.
