@@ -1,5 +1,15 @@
 const projectsData = [
   {
+    title: 'Omnisocial',
+    description: `OmniMail is an open-source mail client application that enables users to send and receive emails from their preferred email accounts. With a user-friendly interface, OmniMail allows seamless management of emails, including composing, replying, and organizing messages. Powered by Node.js and React.`,
+    imgSrc: 'https://i.ibb.co/GF2W669/Screenshot-2023-07-08-at-11-00-26.png',
+    href: 'https://omnisocial.vercel.app',
+    github: 'https://github.com/anonymousMornach/Omnisocial',
+    tech1: 'Express',
+    tech2: 'Next',
+    tech3: 'TypeScript',
+  },
+  {
     title: 'Omnimail',
     description: `OmniMail is an open-source mail client application that enables users to send and receive emails from their preferred email accounts. With a user-friendly interface, OmniMail allows seamless management of emails, including composing, replying, and organizing messages. Powered by Node.js and React.`,
     imgSrc: 'https://i.ibb.co/GF2W669/Screenshot-2023-07-08-at-11-00-26.png',
