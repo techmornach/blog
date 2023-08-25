@@ -1,5 +1,15 @@
 const projectsData = [
   {
+    title: 'OmniForexBot',
+    description: `OmniForexBot is a trading bot that uses machine learning to predict the direction of the market. It uses a combination of technical indicators and fundamental analysis to make trading decisions. The bot is designed to be easy to use and requires no prior knowledge of trading or programming. It can be used by anyone who wants to make money from the forex market without having to spend hours analyzing charts and reading news articles. it also has the ability to send signals to a telegram channel with well detailed analysis.`,
+    imgSrc: 'https://i.ibb.co/0jX5Q0K/Screenshot-2023-07-08-at-11-05-09.png',
+    href: 'https://t.me/+rOw7C5x3JtlkYjI0',
+    github: 'https://github.com/anonymousMornach/OmniForexBot',
+    tech1: 'Mql5',
+    tech2: 'C++',
+    tech3: 'Telegram',
+  },
+  {
     title: 'Omnisocial',
     description: `OmniMail is an open-source mail client application that enables users to send and receive emails from their preferred email accounts. With a user-friendly interface, OmniMail allows seamless management of emails, including composing, replying, and organizing messages. Powered by Node.js and React.`,
     imgSrc: 'https://i.ibb.co/GF2W669/Screenshot-2023-07-08-at-11-00-26.png',
