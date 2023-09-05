@@ -1,9 +1,22 @@
 const experienceData = [
   {
+    title: 'Software Engineer',
+    company: 'Omniteleos',
+    location: 'Lagos, Nigeria',
+    range: '2023 - Present',
+    url: 'https://omniteleos.com',
+    text1:
+      'Developed and implemented responsive front-end interfaces using HTML, CSS, and JavaScript, ensuring optimal user experience across different devices.',
+    text2:
+      'Built RESTful APIs using Node.js and Express.js, enabling seamless communication between front-end and back-end systems.',
+    text3:
+      'Collaborated with cross-functional teams to gather user requirements, analyze project scope, and deliver high-quality applications.',
+  },
+  {
     title: 'Full-Stack Developer',
     company: 'Luvable Babycare Stores',
     location: 'Lagos, Nigeria',
-    range: '2021 - Present',
+    range: '2021 - 2023',
     url: 'https://luvable-landing.onrender.com',
     text1:
       'Developed and implemented responsive front-end interfaces using HTML, CSS, and JavaScript, ensuring optimal user experience across different devices.',
