@@ -213,21 +213,21 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Software Engineer at{' '}
+            I work as a Tech Lead at{' '}
             <Link
               href={'https://landing-page.onrender.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Luvable Babycare
+              Omniteleos
             </Link>
             .
           </p>
           <br />
-          <p>I work on building Scalable and Reliable Web Applications.</p>
+          <p>I work on building Scalable and Reliable data-intensive applications.</p>
           <br />
           <p>
-            I have been trying to shift my field from Software Engineering to Data Science. I have
-            been constantly applying for the same as well.
+            I have been trying to expand my field into Game Development. I have been constantly
+            applying for the same as well.
           </p>
           <br />
           <p>
@@ -274,8 +274,7 @@ export default function Now(currentlyReading) {
           </p>
           <br />
           <p>
-            I recently started to draft a post about Building Data Intensive Applications, it will
-            be a good one!
+            I recently started to draft a post about Building Unity Games, it will be a good one!
           </p>
         </div>
         <div className="mt-3 text-sm">

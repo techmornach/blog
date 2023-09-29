@@ -67,13 +67,12 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building Scalable and Reliable Web Applications
-                at{' '}
+                {text1} Currently, I am focused on building Scalable and Reliable Applications at{' '}
                 <Link
-                  href={'https://www.luvable-landing.onrender.com/'}
+                  href={'https://www.omniteleos.com/'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Luvable Babycare
+                  Omniteleos
                 </Link>
               </RoughNotation>
             </p>
@@ -91,7 +90,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <p className="sm:block md:hidden lg:hidden">
               I am always looking to learn new things. I am currently working on a few projects
               related to
-              <span className="font-semibold">Scalable Data Systems </span>
+              <span className="font-semibold">Scalable Data Intensive Systems </span>
               At the same time I am{' '}
               <RoughNotation
                 type="underline"
@@ -101,8 +100,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of Web
-                Development
+                actively on the lookout for remote Jobs which I can pursue in my field
               </RoughNotation>
             </p>
             <p className="hidden md:block">
@@ -116,7 +114,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 strokeWidth="3"
                 show={true}
               >
-                <span className="text-black dark:text-white">Scalable Data Systems </span>
+                <span className="text-black dark:text-white">Scalable Data Intensive Systems </span>
               </RoughNotation>
               At the same time I am{' '}
               <RoughNotation
@@ -127,8 +125,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of
-                Software Engineering
+                actively on the lookout for remote Jobs which I can pursue in my field
               </RoughNotation>
             </p>
             <br />
@@ -197,10 +194,10 @@ export default function AuthorLayout({ children, frontMatter }) {
               <ul>
                 <li>
                   <Link
-                    href={'https://github.com/timlrx/tailwind-nextjs-starter-blog'}
+                    href={'https://github.com/musing'}
                     className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   >
-                    Timothy's Next.js and Tailwind CSS template
+                    Parth Desai Blog template
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
