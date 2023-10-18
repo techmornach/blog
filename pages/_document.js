@@ -128,22 +128,22 @@ class MyDocument extends Document {
             itemScope
             itemType="http://schema.org/Person"
             className="fiverr-seller-widget"
-            style="display: inline-block;"
+            style={{ display: 'inline-block' }}
           >
             <a
               itemProp="url"
               href="https://www.fiverr.com/omniteleos"
               rel="nofollow noreferrer"
               target="_blank"
-              style="display: inline-block;"
+              style={{ display: 'inline-block' }}
             >
               <div
                 className="fiverr-seller-content"
                 id="fiverr-seller-widget-content-610e8f3e-b262-405b-976a-f6a94c27a655"
                 itemProp="contentURL"
-                style="display: none;"
+                style={{ display: 'none' }}
               ></div>
-              <div id="fiverr-widget-seller-data" style="display: none;">
+              <div id="fiverr-widget-seller-data" style={{ display: 'none' }}>
                 <div itemProp="name">omniteleos</div>
                 <div itemScope itemType="http://schema.org/Organization">
                   <span itemProp="name">Fiverr</span>
