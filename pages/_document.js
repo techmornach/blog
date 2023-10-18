@@ -150,7 +150,7 @@ class MyDocument extends Document {
                 </div>
                 <div itemProp="jobtitle">Seller</div>
                 <div itemProp="description">
-                  I'm Tech Mornach, and my mission is simple: to help you succeed with tech that's
+                  I'm Ifedayo, and my mission is simple: to help you succeed with tech that's
                   practical and budget-friendly. I offer scalable web solutions, super-accurate 3D
                   models, and eye-catching graphic designs. Why pick me? I'm all about
                   affordability, easy-to-use tech, flexibility, and a real commitment to your needs.
