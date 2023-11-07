@@ -121,6 +121,7 @@ export default function Timeline() {
             National Diploma in Science Laboratory Technology
           </p>
         </li>
+
         <Disclosure>
           {({ open }) => (
             <>

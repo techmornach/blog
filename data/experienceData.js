@@ -1,5 +1,15 @@
 const experienceData = [
   {
+    title: 'Full-Stack Software Engineer',
+    company: 'Shopascart',
+    location: 'Richmond, Virginia, United States of America',
+    range: '2023 - Present',
+    url: 'https://shopascart.com/',
+    text1: '',
+    text2: '',
+    text3: '',
+  },
+  {
     title: 'Instructor',
     company: 'Gomycode',
     location: 'Lagos, Nigeria',
