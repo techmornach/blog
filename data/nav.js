@@ -15,7 +15,7 @@ export const navigation = {
     { name: 'Recommends', href: '/recommends' },
     { name: 'Journey', href: '/journey' },
     { name: 'Quotes', href: '/quotes' },
-    { name: 'Tweets', href: '/tweets' },
+    { name: 'Certificates', href: '/certificates' },
     { name: 'RSS', href: '/feed.xml' },
     { name: 'Sitemap', href: '/sitemap.xml' },
     // { name: 'Guestbook', href: '/guestbook' },

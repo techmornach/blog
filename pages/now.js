@@ -203,7 +203,7 @@ export default function Now(currentlyReading) {
                 )}
               </span>
               <br />
-              <span className="ml-2 font-semibold">Drinking:</span> <span>Coffee</span>
+              <span className="ml-2 font-semibold">Playing:</span> <span>Genshin Impact</span>
             </div>
           </div>
         </div>
@@ -213,12 +213,12 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Tech Lead at{' '}
+            I work as a Software Engineer at{' '}
             <Link
-              href={'https://landing-page.onrender.com/'}
+              href={'https://shopascart.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Omniteleos
+              Shopascart
             </Link>
             .
           </p>
@@ -255,23 +255,7 @@ export default function Now(currentlyReading) {
 
         {/* Personal life */}
         <div className="pt-6">
-          <p>
-            I've been slowly building this website, trying to share interesting things with anyone
-            who wants to read it.{' '}
-            <Link
-              href={'https://www.swyx.io/learn-in-public'}
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              This
-            </Link>{' '}
-            article is a great reason to start your blog.
-          </p>
-          <br />
-          <p>
-            I am also going to start applying for Bachelors in Medcine in January 2024 for intake of
-            Summer 2025. I hope to get a good university at Lagos. I'll update this page after I get
-            my admits.
-          </p>
+          <p>`I'm currently working on a new gen E-Commerce solution for business @Omniteleos`</p>
           <br />
           <p>
             I recently started to draft a post about Building Unity Games, it will be a good one!

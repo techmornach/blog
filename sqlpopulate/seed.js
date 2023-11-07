@@ -22,9 +22,9 @@ connection.connect((err) => {
     CREATE TABLE IF NOT EXISTS guestbook (
       id INT AUTO_INCREMENT PRIMARY KEY,
       email VARCHAR(255) NOT NULL,
-      body TEXT,
+      body VARCHAR(255),
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      created_by INT,
+      created_by VARCHAR(255),
       updated_at TIMESTAMP
     )
   `

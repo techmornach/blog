@@ -69,10 +69,10 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 {text1} Currently, I am focused on building Scalable and Reliable Applications at{' '}
                 <Link
-                  href={'https://www.omniteleos.com/'}
+                  href={'https://shopascart.com/'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Omniteleos
+                  Shopascart
                 </Link>
               </RoughNotation>
             </p>

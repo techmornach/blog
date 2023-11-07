@@ -20,7 +20,7 @@ connection.connect((err) => {
   // SQL query to create the guestbook table
   const createTableQuery = `
     CREATE TABLE IF NOT EXISTS views (
-      slug  VARCHAR(255)
+      slug  VARCHAR(255),
       count INT
     )
   `

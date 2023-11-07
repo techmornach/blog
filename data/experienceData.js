@@ -5,9 +5,10 @@ const experienceData = [
     location: 'Richmond, Virginia, United States of America',
     range: '2023 - Present',
     url: 'https://shopascart.com/',
-    text1: '',
-    text2: '',
-    text3: '',
+    text1:
+      'Assisting in enhancing existing software components and adding new features, including bug fixes',
+    text2: 'Integrated external software libraries and APIs into existing projects.',
+    text3: 'Implementing new features based on business requirements.',
   },
   {
     title: 'Instructor',
@@ -66,6 +67,17 @@ const experienceData = [
       "Collaborated with programmers and graphic designers to create a website that aligned with the company's branding and visual design intent.",
     text3:
       'Developed an e-commerce site, integrating secure payment gateways and inventory management systems, resulting in increased online sales',
+  },
+  {
+    title: 'Mobile Engineer',
+    company: 'Salvador Tech',
+    location: 'Onsite',
+    range: '2018 - 2019',
+    //url: '',
+    text1: 'Debugged Software and Hardware issues in mobile devices.',
+    text2: 'Worked with fixing issues with motherboards and integrated circuit.',
+    text3:
+      'Explained technical terminologies in an easy and simple way for non-technical customers to understand.',
   },
 ]
 

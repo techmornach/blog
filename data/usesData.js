@@ -6,7 +6,7 @@ const usesData = [
   },
   {
     title: 'Dell Vostro"',
-    description: `2.5 GHz Quad-Core Intel Core i5 12th gen CPU, 1 GB GPU, 8 GB 1600 MHz DDR4 RAM`,
+    description: `2.5 GHz Quad-Core Intel Core i5 12th gen CPU, 1 GB Integrated GPU, 8 GB 1600 MHz DDR4 RAM`,
     href: 'https://dell.com/',
   },
   {
@@ -108,6 +108,16 @@ const usesData = [
     title: 'Blender',
     description: `Perfect for making 3d models`,
     href: 'https://www.blender.org/',
+  },
+  {
+    title: 'Iclone 8',
+    description: `Perfect for making realisitic animations`,
+    href: 'https://www.reallusion.com/',
+  },
+  {
+    title: 'Character Creator 4',
+    description: `Perfect for making realisitic lifelike characters`,
+    href: 'https://www.reallusion.com/',
   },
   {
     title: 'Typora',

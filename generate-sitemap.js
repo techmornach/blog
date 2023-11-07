@@ -17,6 +17,7 @@ const siteMetadata = require('./data/siteMetadata')
     '!pages/_*.js',
     '!pages/_*.tsx',
     '!pages/api',
+    'public/resume.pdf',
   ])
 
   const sitemap = `

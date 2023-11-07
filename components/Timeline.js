@@ -17,40 +17,44 @@ export default function Timeline() {
             <FaBlackTie className="animate-none" />
           </span>
           <h3 className="flex items-center text-base  font-semibold text-gray-900 dark:text-white">
-            Applying for Jobs
+            Working Remotely
             <span className="mr-2 ml-3 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800 dark:bg-blue-200 dark:text-blue-800">
               Present
             </span>
           </h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            June 1st, 2023
+            November, 2023
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Feel confident that I can work as a Full Stack Web Developer. Wish me Luck
+            Software Engineer @ Shopascart
           </p>
         </li>
         <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-yellow-300 ring-8 ring-white dark:bg-yellow-700 dark:ring-gray-900">
-            <SiLeetcode />
+            <BsBuilding />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Joined LeetCode</h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">
+            Began my teaching career
+          </h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Feb 2nd, 2023
+            October, 2023
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Preparing for coding interviews
+            Tech Instructor @ GoMyCode
           </p>
         </li>
         <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-yellow-300 ring-8 ring-white dark:bg-yellow-700 dark:ring-gray-900">
-            <SiLeetcode />
+            <BsBuilding />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Joined Upwork</h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">
+            Founded a startup
+          </h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            November 12, 2022
+            November, 2022
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Began my freelancing career
+            Tech Lead @ Omniteleos
           </p>
         </li>
         <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
@@ -61,7 +65,7 @@ export default function Timeline() {
             6 Month Internship
           </h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            October 12th, 2022
+            October, 2022
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
             Full Stack Web Developer @ Zuri
@@ -71,12 +75,12 @@ export default function Timeline() {
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-purple-200 ring-8 ring-white dark:bg-purple-900 dark:ring-gray-900">
             <TbDeviceDesktopAnalytics />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">First Job</h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Freelancing</h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            November 17th, 2021
+            November, 2021
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Web Developer @ Luvable Babycare Stores
+            Software Engineer (freelancer) @ Upwork
           </p>
         </li>
         <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
@@ -87,21 +91,31 @@ export default function Timeline() {
             Started University
           </h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            October 19, 2021
+            October, 2021
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
             Bachelor of Sciences in Computer Science
           </p>
         </li>
         <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
+          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
+            <TbDeviceDesktopAnalytics />
+          </span>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">First Job</h3>
+          <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            September, 2020
+          </time>
+          <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+            Full Stack Web Developer @ Luvable Babycare Stores
+          </p>
+        </li>
+        <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-purple-500 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
             <BsBuilding />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-            Started My A Level
-          </h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">A Level</h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            September 21st, 2019
+            September, 2019
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
             A level in Sciences
@@ -111,14 +125,12 @@ export default function Timeline() {
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
             <BsBuilding />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-            Started Polytecnic
-          </h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Apprenticeship</h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            October 25th, 2018
+            November, 2018
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            National Diploma in Science Laboratory Technology
+            Mobile Engineer @ Salvador Tech
           </p>
         </li>
 
@@ -151,7 +163,7 @@ export default function Timeline() {
                       Finished Senior Secondary School
                     </h3>
                     <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                      September 23th, 2018
+                      September, 2018
                     </time>
                     <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
                       With Outstanding Performance
@@ -165,7 +177,7 @@ export default function Timeline() {
                       First Website
                     </h3>
                     <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                      November 4th, 2014
+                      November, 2014
                     </time>
                     <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
                       Made my First Website with WordPress
