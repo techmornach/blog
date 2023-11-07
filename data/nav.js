@@ -16,6 +16,7 @@ export const navigation = {
     { name: 'Journey', href: '/journey' },
     { name: 'Quotes', href: '/quotes' },
     { name: 'Certificates', href: '/certificates' },
+    { name: 'Game Zone', href: '/gamezone' },
     { name: 'RSS', href: '/feed.xml' },
     { name: 'Sitemap', href: '/sitemap.xml' },
     // { name: 'Guestbook', href: '/guestbook' },

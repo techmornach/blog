@@ -21,6 +21,8 @@ import {
   PersonIcon,
   ArchiveIcon,
   TwitterLogoIcon,
+  EnvelopeClosedIcon,
+  PlayIcon,
   RocketIcon,
   ChatBubbleIcon,
   EnterIcon,
@@ -394,9 +396,9 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            {/*            <Menu.Item>
+            <Menu.Item>
               {({ active }) => (
-                <Link href="/tweets">
+                <Link href="/certificates">
                   <a
                     className={classNames(
                       active
@@ -406,12 +408,31 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <TwitterLogoIcon className="mr-4 mt-0.5" /> Tweets
+                      <EnvelopeClosedIcon className="mr-4 mt-0.5" /> Certificates
                     </div>
                   </a>
                 </Link>
               )}
-            </Menu.Item> */}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/gamezone">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <PlayIcon className="mr-4 mt-0.5" />
+                      Game Zone
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
           </div>
         </Menu.Items>
       </Transition>

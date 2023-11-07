@@ -1,5 +1,5 @@
 import SocialIcon from './social-icons'
-import FolderIcon from './icon'
+import { FaGraduationCap } from 'react-icons/fa'
 
 const CertificateCard = ({ title, description, imgSrc, href, tech1, tech2, tech3 }) => (
   <div
@@ -12,7 +12,7 @@ const CertificateCard = ({ title, description, imgSrc, href, tech1, tech2, tech3
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">
           <div className="my-2">
-            <FolderIcon />
+            <FaGraduationCap minWidth={500} />
           </div>
           <div className="flex flex-row justify-between">
             <div className="mx-1.5">
