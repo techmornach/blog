@@ -1,14 +1,29 @@
+import React, { useState, useEffect } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import gameData from '@/data/gameData'
 import GameCard from '@/components/GameCard'
 import { PageSEO } from '@/components/SEO'
+import useSound from 'use-sound'
 
 export default function GameZone() {
+  const [playThemeSound, { stop }] = useSound('/static/sounds/adventure.mp3', {
+    volume: 0.5, // Adjust the volume as needed (0.5 is 50% volume)
+  })
+
+  useEffect(() => {
+    playThemeSound()
+
+    return () => {
+      // This will stop the sound when the component unmounts (leaves the page)
+      stop()
+    }
+  }, [playThemeSound, stop])
+
   return (
     <>
       <PageSEO
         title={`GameZone - ${siteMetadata.author}`}
-        description="Orignal Games I've built throughout my career, sit back, relax and have fun"
+        description="Original Games I've built throughout my career, sit back, relax and have fun"
       />
       <div className="mx-auto max-w-6xl divide-y divide-gray-400">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -16,15 +31,18 @@ export default function GameZone() {
             GameZone
           </h1>
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
-            Orignal Games I've built throughout my career, sit back, relax and have fun
+            Original Games I've built throughout my career, sit back, relax and have fun
           </p>
+          <img
+            src="/games/game.gif"
+            style={{
+              width: '200px',
+              margin: 'auto',
+              filter: 'blur(1.2px) drop-shadow(20px 20px 50px #0a183d)',
+            }}
+          />
         </div>
         <div className="container py-12">
-          <img
-            src="/gameImages/luffy.gif"
-            style={{ width: 80, marginLeft: 'auto', marginRight: 'auto' }}
-            className=""
-          />
           <div className="-m-4 flex flex-wrap">
             {gameData.map((d) => (
               <GameCard
