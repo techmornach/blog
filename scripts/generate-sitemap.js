@@ -15,7 +15,7 @@ const siteMetadata = require('../data/siteMetadata')
     'data/snippets/**/*.mdx',
     'public/tags/**/*.xml',
     'public/*.pdf',
-    'public/certificates/*.pdf',
+    'public/**/*.pdf',
     '!pages/_*.js',
     '!pages/_*.tsx',
     '!pages/api',
