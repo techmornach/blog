@@ -3,8 +3,8 @@ import siteMetadata from '@/data/siteMetadata'
 import gameData from '@/data/gameData'
 import GameCard from '@/components/GameCard'
 import { PageSEO } from '@/components/SEO'
-import useSound from 'use-sound'
-
+import { GameIcon } from '@/components/icon'
+import { backgroundImage } from 'tailwindcss/defaultTheme'
 export default function GameZone() {
   return (
     <>
