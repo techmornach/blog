@@ -20,13 +20,6 @@ export default function GameZone() {
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
             Original Games I've built throughout my career, sit back, relax and have fun
           </p>
-          <img
-            src="/games/game.gif"
-            style={{
-              width: '200px',
-              margin: 'auto',
-            }}
-          />
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
