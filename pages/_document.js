@@ -123,51 +123,6 @@ class MyDocument extends Document {
         <body className="bg-white text-black antialiased dark:bg-background-color dark:text-white">
           <Main />
           <NextScript />
-
-          <div
-            itemScope
-            itemType="http://schema.org/Person"
-            className="fiverr-seller-widget"
-            style={{ display: 'inline-block' }}
-          >
-            <a
-              itemProp="url"
-              href="https://www.fiverr.com/omniteleos"
-              rel="nofollow noreferrer"
-              target="_blank"
-              style={{ display: 'inline-block' }}
-            >
-              <div
-                className="fiverr-seller-content"
-                id="fiverr-seller-widget-content-610e8f3e-b262-405b-976a-f6a94c27a655"
-                itemProp="contentURL"
-                style={{ display: 'none' }}
-              ></div>
-              <div id="fiverr-widget-seller-data" style={{ display: 'none' }}>
-                <div itemProp="name">omniteleos</div>
-                <div itemScope itemType="http://schema.org/Organization">
-                  <span itemProp="name">Fiverr</span>
-                </div>
-                <div itemProp="jobtitle">Seller</div>
-                <div itemProp="description">
-                  I'm Ifedayo, and my mission is simple: to help you succeed with tech that's
-                  practical and budget-friendly. I offer scalable web solutions, super-accurate 3D
-                  models, and eye-catching graphic designs. Why pick me? I'm all about
-                  affordability, easy-to-use tech, flexibility, and a real commitment to your needs.
-                  I'm not just a tech enthusiast; I'm your partner on the journey to a brighter
-                  business future. Let's harness the power of tech to build your business.
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <script
-            id="fiverr-seller-widget-script-610e8f3e-b262-405b-976a-f6a94c27a655"
-            src="https://widgets.fiverr.com/api/v1/seller/omniteleos?widget_id=610e8f3e-b262-405b-976a-f6a94c27a655"
-            data-config='{"category_name":"\n                                    Programming \u0026 Tech\n\n                            "}'
-            async="true"
-            defer="true"
-          ></script>
         </body>
       </Html>
     )

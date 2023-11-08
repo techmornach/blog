@@ -1,6 +1,5 @@
 import SocialIcon from './social-icons'
-import { FaGamepad } from 'react-icons/fa'
-
+import { GameIcon } from './icon'
 const GameCard = ({ title, description, imgSrc, href, tech1, tech2, tech3 }) => (
   <div
     className="md p-4 md:w-1/2"
@@ -12,7 +11,7 @@ const GameCard = ({ title, description, imgSrc, href, tech1, tech2, tech3 }) => 
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">
           <div className="my-2">
-            <FaGamepad minWidth={500} />
+            <GameIcon />
           </div>
           <div className="flex flex-row justify-between">
             <div className="mx-1.5">
@@ -23,7 +22,7 @@ const GameCard = ({ title, description, imgSrc, href, tech1, tech2, tech3 }) => 
         <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">{title}</h2>
 
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
-          <img src={`${imgSrc}`} />
+          <img width={'100%'} src={`${imgSrc}`} />
         </p>
         <div className="flex flex-row justify-between">
           <div className="text-sm text-gray-400">
