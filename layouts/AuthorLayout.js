@@ -1,5 +1,7 @@
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
+import hero from '/public/static/images/hero.png'
+import Test from '@/components/Test'
 import Link from '@/components/Link'
 import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
@@ -58,6 +60,18 @@ export default function AuthorLayout({ children, frontMatter }) {
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+            <div>
+              <Test
+                thumb={hero}
+                thumbWidth={768}
+                thumbHeight={432}
+                thumbAlt="Modal video thumbnail"
+                video="/static/video/intro.mp4"
+                videoWidth={1920}
+                videoHeight={1080}
+              />
+            </div>
+
             <p>
               <RoughNotation
                 type="bracket"
@@ -69,10 +83,10 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 {text1} Currently, I am focused on building Scalable and Reliable Applications at{' '}
                 <Link
-                  href={'https://shopascart.com/'}
+                  href={'https://omniteleos.vercel.app'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Shopascart
+                  Omniteleos
                 </Link>
               </RoughNotation>
             </p>
