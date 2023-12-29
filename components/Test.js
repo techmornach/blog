@@ -94,11 +94,11 @@ const Test = ({ thumb, thumbWidth, thumbHeight, thumbAlt, video, videoWidth, vid
             )}
           </div>
           <button
-            className="group absolute top-full flex -translate-y-1/2 transform items-center rounded-full bg-white p-4 font-medium shadow-lg"
+            className="group absolute top-full flex -translate-y-1/2 transform items-center rounded-full bg-black p-4 font-medium shadow-lg dark:bg-white"
             onClick={toggleVideo}
           >
             <svg
-              className="h-6 w-6 shrink-0 fill-current text-gray-400 group-hover:text-blue-600"
+              className="h-6 w-6 shrink-0 fill-current text-white group-hover:text-primary-color-500 dark:text-black"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
