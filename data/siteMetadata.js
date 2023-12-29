@@ -6,16 +6,16 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Ifedayo',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://techmornach.vercel.app',
-  siteRepo: 'https://github.com/anonymousMornach/blog',
+  siteUrl: 'https://taiwoifedayo.com.ng',
+  siteRepo: 'https://github.com/techmornach/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'techmornach@gmail.com',
-  github: 'https://github.com/anonymousMornach',
+  github: 'https://github.com/techmornach',
   twitter: 'https://twitter.com/taiwoifedayo4',
   linkedin: 'https://www.linkedin.com/in/tech-mornach/',
-  website: 'https://taiwoifedayo.vercel.app',
+  website: 'https://taiwoifedayo.com.ng',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: 'techmornach.vercel.app', // e.g. tailwind-nextjs-starter-blog.vercel.app
