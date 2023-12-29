@@ -35,7 +35,13 @@ const Test = ({ thumb, thumbWidth, thumbHeight, thumbAlt, video, videoWidth, vid
         >
           <div className="flex flex-col justify-center">
             {videoOpen ? (
-              <video ref={videoRef} width={videoWidth} height={videoHeight} autoPlay>
+              <video
+                ref={videoRef}
+                width={videoWidth}
+                height={videoHeight}
+                autoPlay
+                className=" mt-0 mb-0"
+              >
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -49,7 +55,7 @@ const Test = ({ thumb, thumbWidth, thumbHeight, thumbAlt, video, videoWidth, vid
                   objectFit="cover"
                 />
                 <svg
-                  className="absolute inset-0 mx-auto h-auto max-w-full md:max-w-none"
+                  className="absolute inset-0 mx-auto h-auto max-w-full"
                   width="768"
                   height="432"
                   viewBox="0 0 768 432"
