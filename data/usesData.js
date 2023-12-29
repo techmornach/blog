@@ -20,6 +20,11 @@ const usesData = [
     href: 'https://www.alfredapp.com/',
   },
   {
+    title: 'Superhuman',
+    description: `Email client with keybindings`,
+    href: 'https://superhuman.com',
+  },
+  {
     title: 'Photoshop',
     description: `Perfect for editing images for web use`,
     href: 'https://www.adobe.com/ng/products/photoshop.html',
@@ -128,6 +133,11 @@ const usesData = [
     title: 'Figma',
     description: `Designs and graphics`,
     href: 'https://figma.com',
+  },
+  {
+    title: 'Notion',
+    description: `Permanent docs, organizing my life.`,
+    href: 'https://www.notion.so/',
   },
 ]
 

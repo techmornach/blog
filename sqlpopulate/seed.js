@@ -2,10 +2,10 @@ const mysql = require('mysql')
 
 // Create a connection to the MySQL database
 const connection = mysql.createConnection({
-  host: 'techmornach.mysql.database.azure.com',
-  user: 'techmornach',
-  password: 'drojuope10$',
-  database: 'blog',
+  host: 'sql11.freemysqlhosting.net',
+  user: 'sql11660055',
+  password: 'sbh8BQqJ12',
+  database: 'sql11660055',
   port: 3306,
 })
 

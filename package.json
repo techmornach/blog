@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "4.5.2",
-    "@headlessui/react": "^1.7.17",
+    "@headlessui/react": "^1.5.0",
     "@lyket/react": "^1.4.8",
     "@mailchimp/mailchimp_marketing": "^3.0.58",
     "@prisma/client": "^3.15.2",
@@ -57,7 +57,6 @@
     "react-animated-cursor": "^2.7.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.4.0",
-    "react-modal": "^3.16.1",
     "react-rough-notation": "^1.0.1",
     "react-scroll-progress-bar": "^1.1.13",
     "react-share": "^4.4.0",
