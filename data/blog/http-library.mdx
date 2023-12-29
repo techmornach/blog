@@ -1,0 +1,370 @@
+---
+title: Crafting an HTTP Library in Rust
+date: '2023-12-27'
+tags: [Rust, Networking, HTTP, Backend]
+draft: false
+summary: Welcome to the journey of building an HTTP library in Rust—a language known for its emphasis on safety, speed, and concurrency.
+---
+
+{' '}
+
+<img
+  className="inline"
+  src="/static/images/Blog/http-rust/3.png"
+  alt="Crafting an HTTP Library in Rust"
+/>
+
+# Crafting an HTTP Library in Rust: Building a Robust Foundation
+
+## Introduction
+
+Welcome to the journey of building an HTTP library in Rust—a language known for its emphasis on safety, speed, and concurrency. Before we delve into the code, let's ensure you're well-prepared by exploring the basics of Rust. If you haven't already, install Rust and Cargo from [Rust's official website](https://www.rust-lang.org/). Once installed, create a new project with the command `cargo new http-library`. Let's embark on this adventure with a focus on clarity and professionalism.
+
+## How HTTP Works
+
+{' '}
+
+<img className="inline" src="/static/images/Blog/http-rust/2.png" alt="Http" />
+
+Let's delve into the workings of HTTP, the foundation of data exchange on the Web. HTTP stands for "hypertext transform protocol", it is an application protocol designed to transfer information between networked devices.
+
+Operating in a client-server model, HTTP involves:
+
+- **HTTP Request**: When a client (e.g., a web browser) seeks a resource, it sends an HTTP request containing the version type, method, url, headers, and an optional message body.
+
+  <img className="inline" src="/static/images/Blog/http-rust/1.webp" alt="Http Request" />
+
+- **HTTP Response**: The server processes the request and sends back an HTTP response with the version, status code, status text, headers, and an optional response body.
+
+Our Rust HTTP library encapsulates these concepts, allowing for the parsing of requests and construction of responses—a structured approach to web interactions.
+
+## Step 1: Define HTTP Request Components
+
+Our initial task is to understand the key components of an HTTP request. Imagine an explorer seeking treasures—a request contains a method, a path, headers, and a message body. Let's create the necessary structures to encapsulate these elements in `src/httprequest.rs`:
+
+```rust
+use std::collections::HashMap;
+
+// Enum to represent the resource type (path) in an HTTP request
+#[derive(PartialEq, Debug)]
+pub enum Resource {
+    Path(String),
+}
+
+// Struct to represent an HTTP request
+#[derive(PartialEq, Debug)]
+pub struct HttpRequest {
+    pub method: Method,
+    pub version: Version,
+    pub resource: Resource,
+    pub headers: HashMap<String, String>,
+    pub msg_body: String,
+}
+```
+
+- **Resource Enum**: Represents the path of our request, encapsulated in the `Resource` enum.
+
+- **HttpRequest Struct**: Our representation of an HTTP request, which includes the method, version, resource, headers, and the message body.
+
+## Step 2: Implement Request Parsing
+
+Let's empower our library to parse incoming HTTP requests, transforming raw text into a structured representation.
+
+```rust
+// Implementing conversion from a raw string to an HttpRequest
+impl From<String> for HttpRequest {
+    fn from(req: String) -> Self {
+        let mut parsed_method = Method::Uninitialized;
+        let mut parsed_version = Version::V1_1;
+        let mut parsed_resource = Resource::Path("".to_string());
+        let mut parsed_headers = HashMap::new();
+        let mut parsed_msg_body = "";
+
+        // Looping through each line of the raw HTTP request
+        for line in req.lines() {
+            // Parsing logic to identify method, version, headers, and message body
+          	if line.contains("HTTP")
+            	{
+                	let (method, s, version) = process_req_line(line);
+                	parsed_method = method;
+                	parsed_resource = resource;
+                	parsed_version = version;
+            	}
+            	else if line.contains(":")
+            	{
+                	let (key, value) = process_req_header(line);
+                	parsed_headers.insert(key, value);
+            	}
+            	else if line.len() == 0
+            	{
+
+            	}
+            	else{
+                	parsed_msg_body = line;
+            	}
+        }
+
+        // Creating and returning an HttpRequest instance
+        HttpRequest {
+            method: parsed_method,
+            version: parsed_version,
+            resource: parsed_resource,
+            headers: parsed_headers,
+            msg_body: parsed_msg_body.to_string(),
+        }
+    }
+}
+```
+
+- The `From<String>` implementation enables the conversion of raw text (`String`) into an `HttpRequest` structure.
+
+- The parsing logic navigates through the incoming text, identifying method, version, headers, and the message body.
+
+## Step 3: Define Enums for Method and Version
+
+Enums play a crucial role in representing HTTP methods and versions elegantly.
+
+```rust
+// Enum to represent HTTP methods
+#[derive(PartialEq)]
+#[derive(Debug)]
+pub enum Method {
+    Get,
+    Post,
+    Uninitialized,
+}
+
+// Enum to represent HTTP versions
+#[derive(PartialEq, Debug)]
+pub enum Version {
+    V1_1,
+    V2_0,
+    Uninitialized,
+}
+```
+
+- **Method Enum**: Represents HTTP methods such as GET and POST, with `Uninitialized` as an indicator when the method is unknown.
+
+- **Version Enum**: Captures HTTP versions, including V1_1 and V2_0, with `Uninitialized` for cases where the version is yet to be determined.
+
+## Step 4: Add Unit Tests
+
+Before our library ventures into the world, let's fortify it with unit tests to ensure its resilience.
+
+```rust
+// Unit tests for the library
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // Test method for converting raw strings into Method enums
+    #[test]
+    fn test_method_into() {
+        let m: Method = "GET".into();
+        assert_eq!(m, Method::Get);
+    }
+
+    // Test method for converting HTTP version strings into Version enums
+    #[test]
+    fn test_version_into() {
+        let m: Version = "HTTP/1.1".into();
+        assert_eq!(m, Version::V1_1);
+    }
+
+    // Comprehensive test simulating the arrival of an HTTP request and verifying the parser's accuracy
+    #[test]
+    fn test_incoming_http_request() {
+        let s: String = String::from("GET /greeting HTTP/1.1\r\nHost: localhost:3000\r\nUser-Agent: curl/7.64.1\r\nAccept: */*\r\n\r\n");
+        let mut headers_expected = HashMap::new();
+        headers_expected.insert("Host".into(), " localhost".into());
+        headers_expected.insert("Accept".into(), " */*".into());
+        headers_expected.insert("User-Agent".into(), " curl/7.64.1".into());
+        let req: HttpRequest = s.into();
+
+        // Assertions to verify parsed HttpRequest components
+        assert_eq!(Method::Get, req.method);
+        assert_eq!(Version::V1_1, req.version);
+        assert_eq!(Resource::Path("/greeting".to_string()), req.resource);
+        assert_eq!(headers_expected, req.headers);
+    }
+}
+```
+
+- **Test Method Into**: Ensures the conversion of raw strings into `Method` enums is accurate.
+
+- **Test Version Into**: Validates the transformation of HTTP version strings into `Version` enums.
+
+- **Test Incoming HTTP Request**: A comprehensive test simulating the arrival of an HTTP request and verifying the parser's accuracy.
+
+## HTTP Response Implementation
+
+Now, let's shift our focus to handling HTTP responses. We aim to construct well-formed responses to gracefully communicate with clients.
+
+## Step 5: Define HTTP Response Components
+
+In `src/httpresponse.rs`, we define the components of an HTTP response—a structured entity ready to traverse the digital realms.
+
+```rust
+use std::collections::HashMap;
+use std::io::{Result, Write};
+
+// Struct to represent an HTTP response
+#[derive(Debug, PartialEq, Clone)]
+pub struct HttpResponse<'a> {
+    version: &'a str,
+    status_code: &'a str,
+    status_text: &'a str,
+    headers: Option<HashMap<&'a str, &'a str>>,
+    body: Option<String>,
+}
+```
+
+- **HttpResponse Struct**: Represents the essential elements of an HTTP response—version, status code, status text, headers, and the body.
+
+## Step 6: Implement Response Construction
+
+We now create methods to construct HTTP responses, bringing life to the structured `HttpResponse`.
+
+```rust
+// Implementing default for HttpResponse
+impl<'a> Default for HttpResponse<'a> {
+    fn default() -> Self {
+        HttpResponse {
+            version: "HTTP/1.1",
+            status_code: "200",
+            status_text: "OK",
+            headers: None,
+            body: None,
+        }
+    }
+}
+
+// Implementation for HttpResponse
+impl<'a> HttpResponse<'a> {
+    // Constructor for creating an HttpResponse instance
+    pub fn new(
+        status_code: &'a str,
+        headers: Option<HashMap<&'a str, &'a str>>,
+        body: Option<String>,
+    ) -> HttpResponse<'a> {
+        // Creating a response with specified status code, headers, and body
+
+        let mut response: HttpResponse<'a> = HttpResponse::default();
+        if status_code != "200" {
+            response.status_code = status_code.into();
+        }
+
+        // Handling headers, setting defaults if not provided
+        response.headers = match &headers {
+            Some(_h) => headers,
+            None => {
+                let mut h = HashMap::new();
+                h.insert("Content-Type", "text/html");
+                Some(h)
+            }
+        };
+
+        // Determining status text based on status code
+        response.status_text = match response.status_code {
+            "200" => "OK".into(),
+            "400" => "Bad Request".into(),
+            "404" => "Not Found".into(),
+            "500" => "Internal Server Error".into(),
+            _ => "Not Found".into(),
+        };
+
+        // Setting response body
+        response.body = body;
+        response
+    }
+
+    // Method to send the response to a writable stream
+    pub fn send_response(&self, write_stream: &mut impl Write) -> Result<()> {
+        let res = self.clone();
+        let response_string: String = String::from(res);
+     		// Writing the response string to the provided writable stream
+        let _ = write!(write_stream, "{}", response_string);
+        Ok(())
+    }
+}
+```
+
+- **Default Implementation**: The default response is a serene `200 OK` response with a content type of `text/html`. This ensures a pleasant default experience unless customization is needed.
+
+- **New Method**: A constructor for crafting responses based on status codes, headers, and a body. This method breathes life into the structured response.
+
+- **Send Response Method**: A messenger is summoned, allowing the response to traverse the realms through a writable stream.
+
+## Step 7: Implement Response Serialization
+
+Our grand finale involves converting the structured response into the language of the web—a string ready to traverse the vast digital landscapes.
+
+```rust
+// Implementation for converting HttpResponse to a String
+impl<'a> From<HttpResponse<'a>> for String {
+    fn from(res: HttpResponse) -> String {
+        let res1 = res.clone();
+        // Formatting the response as a string
+        format!(
+            "{} {} {}\r\n{}Content-Length: {}\r\n\r\n{}",
+            &res1.version(),
+            &res1.status_code(),
+            &res1.status_text(),
+            &res1.headers(),
+            &res.body.unwrap_or("".to_string()).len(),
+            &res1.body()
+        )
+    }
+}
+```
+
+- **From Implementation**: Our sorcery reaches its zenith, translating the structured response into a string that echoes across the bytes.
+
+## Using the HTTP Library in Projects
+
+Now that we've crafted our HTTP library, let's see how you can use it in your Rust projects.
+
+1. Add the library as a dependency in your `Cargo.toml` file:
+
+   ```toml
+   [dependencies]
+   http-library = { path = "./path/to/http-library" }
+   ```
+
+   Make sure to replace `./path/to/http-library` with the actual path to your HTTP library.
+
+2. Import the library in your Rust code:
+
+   ```rust
+   extern crate http_library;
+
+   use http_library::{HttpRequest, HttpResponse, Method, Version};
+   ```
+
+3. Create an HTTP request:
+
+   ```rust
+   let raw_request = "GET /greeting HTTP/1.1\r\nHost: localhost:3000\r\nUser-Agent: curl/7.64.1\r\nAccept: */*\r\n\r\n";
+   let http_request: HttpRequest = raw_request.into();
+   ```
+
+4. Create an HTTP response:
+
+   ```rust
+   let http_response = HttpResponse::new("200", None, Some("Hello, World!".to_string()));
+   ```
+
+5. Send the HTTP response to a writable stream:
+
+   ```rust
+   let mut write_stream = Vec::new(); // Replace this with your actual writable stream
+   http_response.send_response(&mut write_stream).expect("Failed to send response");
+   ```
+
+## Conclusion
+
+In this journey, you've explored the creation of an HTTP library in Rust with a focus on clarity and professionalism. Your code transforms raw text into structured entities and vice versa, establishing a robust foundation for web communication.
+
+As you continue your exploration, remember that the web is a vast, interconnected tapestry awaiting your influence. With Rust as your tool, the adventure in web development is boundless and thrilling.
+
+Feel free to extend this library, adding features and refining your code. With every line written, you contribute to the narrative of the web. Happy coding, and may your Rust adventures be both elegant and exciting.

@@ -1,46 +1,46 @@
 export const quotes = [
   {
+    author: 'Brian Kernighan',
+    quote: `Hello, World!.`,
+  },
+  {
     author: 'Steve Jobs',
-    quote: `Your time is limited, so don't waste it living someone else's life.`,
+    quote: `The only way to do great work is to love what you do.`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `If, if, if... doesn't exist.`,
+    author: 'John Johnson',
+    quote: `First, solve the problem. Then, write the code.`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `The glory is being happy. The glory is not winning here or winning there. The glory is enjoying practicing, enjoy every day, enjoying to work hard, trying to be a better player than before.`,
+    author: 'Harold Abelson',
+    quote: `Programs must be written for people to read, and only incidentally for machines to execute.`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `If you don't lose, you cannot enjoy the victories. So I have to accept both things.`,
+    author: 'Alan Kay',
+    quote: `The most disastrous thing that you can ever learn is your first programming language.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `When you do something best in life, you don't really want to give that up, and for me it's tennis.`,
+    author: 'Jon Bentley',
+    quote: `In software, the most beautiful code, the most beautiful functions, and the most beautiful programs are sometimes not there at all.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `There's no way around hard work. Embrace it.`,
+    author: 'David Heinemeier Hansson',
+    quote: `The best way to predict the future is to implement it.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `You have to put in the hours because there's always something which you can improve.`,
+    author: 'Linus Torvalds',
+    quote: `Talk is cheap. Show me the code.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `A man who wins is a man who thinks he can.`,
+    author: 'Cory House',
+    quote: `Code is like humor. When you have to explain it, it’s bad.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `When you're good at something, make that everything.`,
+    author: 'Franklin D. Roosevelt',
+    quote: `The only thing we have to fear is fear itself.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `I've practiced so much.`,
-  },
-  {
-    author: 'Michael Jordan',
-    quote: `limits, like fears, are often just illusions`,
+    author: 'Robert Frost',
+    quote: `In three words I can sum up everything I've learned about life: it goes on.`,
   },
 ]
