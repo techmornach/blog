@@ -47,6 +47,7 @@ module.exports = {
           700: '#9A00E2', // Updated color
           800: '#8300DB', // Updated color
           900: '#6A0568',
+          1000: 'rgb(24, 24, 24)',
         },
         'primary-color': {
           100: '#FDD1D9',

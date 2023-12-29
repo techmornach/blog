@@ -100,7 +100,7 @@ const Test = ({ thumb, thumbWidth, thumbHeight, thumbAlt, video, videoWidth, vid
             )}
           </div>
           <button
-            className="group absolute top-full flex -translate-y-1/2 transform items-center rounded-full bg-black p-4 font-medium shadow-lg dark:bg-white"
+            className="group absolute top-full flex -translate-y-1/2 transform items-center rounded-full bg-primary-1000 p-4 font-medium shadow-lg dark:bg-white"
             onClick={toggleVideo}
           >
             <svg
