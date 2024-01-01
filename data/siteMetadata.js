@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: 'Blog | Taiwo Ifedayo',
   author: 'Taiwo Ifedayo',
-  headerTitle: 'Peasant to Mornachy',
+  headerTitle: 'Sparking innovation one line at a time',
   description: 'My personal blog where I share my journey and ideas',
   snippets: 'Reuseable code snippets collected by Ifedayo',
   language: 'en-us',
