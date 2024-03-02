@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     return res.json(
       entries.map((entry) => ({
-        id: entry.id.toString(),
+        id: entry._id.toString(), // Use _id for MongoDB
         body: entry.body,
         created_by: entry.created_by,
         updated_at: entry.updated_at,
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     })
 
     return res.status(200).json({
-      id: newEntry.id.toString(),
+      id: newEntry._id.toString(), // Use _id for MongoDB
       body: newEntry.body,
       created_by: newEntry.created_by,
       updated_at: newEntry.updated_at,

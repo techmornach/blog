@@ -17,11 +17,6 @@ import ScrollTop from '@/components/ScrollTop'
 import { SessionProvider } from 'next-auth/react'
 import { Provider } from '@lyket/react'
 import dynamic from 'next/dynamic'
-
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  ssr: false,
-})
-
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
@@ -69,14 +64,6 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
           {isDevelopment && isSocket && <ClientReload />}
           <Analytics />
           <LayoutWrapper>
-            <AnimatedCursor
-              innerSize={15}
-              outerSize={30}
-              color="30, 144, 255"
-              outerAlpha={0.5}
-              innerScale={0.6}
-              outerScale={2}
-            />
             <Component {...pageProps} />
           </LayoutWrapper>
         </ThemeProvider>

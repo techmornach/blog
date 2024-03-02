@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   if (req.method === 'GET') {
     return res.json({
-      id: entry.id.toString(),
+      id: entry._id.toString(), // MongoDB uses _id for unique identifier
       body: entry.body,
       created_by: entry.created_by,
       updated_at: entry.updated_at,
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   if (req.method === 'DELETE') {
     await prisma.guestbook.delete({
       where: {
-        id: Number(id),
+        _id: entry._id, // Use _id for MongoDB
       },
     })
 
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
 
     await prisma.guestbook.update({
       where: {
-        id: Number(id),
+        _id: entry._id, // Use _id for MongoDB
       },
       data: {
         body,

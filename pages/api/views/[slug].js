@@ -5,17 +5,33 @@ export default async function handler(req, res) {
     const slug = req.query.slug.toString()
 
     if (req.method === 'POST') {
-      const newOrUpdatedViews = await prisma.views.upsert({
-        where: { slug },
-        create: {
+      // Upsert functionality is not directly available in MongoDB
+      // You'll need to handle creation or update manually
+      let newOrUpdatedViews = await prisma.views.findUnique({
+        where: {
           slug,
         },
-        update: {
-          count: {
-            increment: 1,
-          },
-        },
       })
+
+      if (!newOrUpdatedViews) {
+        // If the view with the specified slug doesn't exist, create a new one
+        newOrUpdatedViews = await prisma.views.create({
+          data: {
+            slug,
+            count: 1, // Initialize count to 1
+          },
+        })
+      } else {
+        // If the view exists, update its count by incrementing by 1
+        newOrUpdatedViews = await prisma.views.update({
+          where: {
+            slug,
+          },
+          data: {
+            count: newOrUpdatedViews.count + 1,
+          },
+        })
+      }
 
       return res.status(200).json({
         total: newOrUpdatedViews.count.toString(),
@@ -23,6 +39,7 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'GET') {
+      // Retrieve the view with the specified slug
       const views = await prisma.views.findUnique({
         where: {
           slug,
