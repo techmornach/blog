@@ -34,23 +34,35 @@ export default function GuestbookPage({ fallbackData }) {
   )
 }
 export async function getStaticProps() {
-  const entries = await prisma.guestbook.findMany({
-    orderBy: {
-      updated_at: 'desc',
-    },
-  })
+  try {
+    // Fetch entries from MongoDB using Prisma
+    const entries = await prisma.guestbook.findMany({
+      orderBy: {
+        updated_at: 'desc',
+      },
+    })
 
-  const fallbackData = entries.map((entry) => ({
-    id: entry.id.toString(),
-    body: entry.body,
-    created_by: entry.created_by.toString(),
-    updated_at: entry.updated_at.toString(),
-  }))
+    // Map entries to desired format
+    const fallbackData = entries.map((entry) => ({
+      id: entry._id.toString(), // Assuming _id is the unique identifier in MongoDB
+      body: entry.body,
+      created_by: entry.created_by.toString(), // Assuming created_by is a string field
+      updated_at: entry.updated_at.toString(), // Assuming updated_at is a Date field
+    }))
 
-  return {
-    props: {
-      fallbackData,
-    },
-    revalidate: 60,
+    return {
+      props: {
+        fallbackData,
+      },
+      revalidate: 60,
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    return {
+      props: {
+        fallbackData: [], // Return empty array if error occurs
+      },
+      revalidate: 60,
+    }
   }
 }
