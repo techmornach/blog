@@ -8,13 +8,13 @@ datasource db {
 }
 
 model views {
-  _id   ObjectId @id
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
   slug  String   @unique
   count BigInt   @default(1)
 }
 
 model guestbook {
-  _id        ObjectId @id
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
   email      String
   body       String
   created_by String
