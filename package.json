@@ -34,7 +34,6 @@
     "@tailwindcss/typography": "^0.5.0",
     "@vercel/analytics": "^1.0.1",
     "autoprefixer": "10.4.5",
-    "cursor-effects": "^1.0.11",
     "date-fns": "^2.28.0",
     "dayjs": "^1.11.3",
     "esbuild": "^0.13.13",
